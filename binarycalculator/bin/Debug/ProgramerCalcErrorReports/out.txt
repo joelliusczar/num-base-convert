@@ -1,0 +1,339 @@
+Null Reference Exception from trying to convert error message to a number
+Null Reference Exception from trying to convert error message to a number
+Null Reference Exception from trying to convert error message to a number
+[7/6/2012 10:26:13 PM]Null Reference Exception from trying to convert error message to a number
+[7/6/2012 10:37:43 PM]Null Reference Exception from trying to convert error message to a number
+[7/6/2012 10:40:32 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/6/2012 10:40:35 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 181
+[7/6/2012 10:40:37 PM]System.NullReferenceException: Object reference not set to an instance of an object.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 47
+[7/7/2012 12:29:16 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/7/2012 12:49:35 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/7/2012 12:49:37 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 181
+[7/7/2012 12:49:47 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/7/2012 12:49:48 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 181
+[7/9/2012 1:04:10 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/9/2012 1:04:13 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 79
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 175
+[7/9/2012 1:04:15 AM]System.NullReferenceException: Object reference not set to an instance of an object.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 53
+[7/9/2012 1:04:15 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 79
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 160
+[7/9/2012 1:06:15 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/9/2012 1:06:25 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 80
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 175
+[7/9/2012 1:06:27 AM]System.NullReferenceException: Object reference not set to an instance of an object.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 53
+[7/9/2012 1:06:27 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 80
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 160
+[7/9/2012 1:06:34 AM]System.NullReferenceException: Object reference not set to an instance of an object.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 53
+[7/9/2012 1:06:34 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 80
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 175
+[7/9/2012 1:36:37 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/9/2012 1:44:17 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 80
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 105
+[7/9/2012 1:44:23 AM]System.NullReferenceException: Object reference not set to an instance of an object.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 53
+[7/9/2012 1:44:23 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 80
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 92
+[7/9/2012 1:45:57 AM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 436
+[7/9/2012 1:46:12 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 80
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 105
+[7/10/2012 3:42:20 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 3:42:25 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 3:53:17 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 3:54:00 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 3:54:59 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 1:29:53 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 436
+[7/10/2012 1:30:25 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 436
+[7/10/2012 1:36:06 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.signedDecToBinTester(Int64 input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 428
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 71
+[7/10/2012 1:43:32 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 1:43:37 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.fromDecIntConversionPos(Int64 input, Int32 size, Int32 convertToBase) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 529
+   at binary_calculator.BinCalc.toAnyBaseInt(String input, Int32 size, Int32 convertToBase, Int32 convertFromBase) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 476
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 63
+[7/10/2012 1:45:43 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 1:53:39 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 438
+[7/10/2012 1:54:19 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 435
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 87
+[7/10/2012 1:54:35 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 3:32:02 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/10/2012 3:34:09 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 8:45:06 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 8:45:07 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 112
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 150
+[7/11/2012 9:09:15 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 424
+[7/11/2012 9:09:25 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 100
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 88
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 83
+[7/11/2012 9:09:27 PM]System.ArgumentException: Value does not fall within the expected range.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 37
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 92
+[7/11/2012 9:09:28 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 100
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 88
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 83
+[7/11/2012 9:09:30 PM]System.ArgumentException: Value does not fall within the expected range.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 37
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 92
+[7/11/2012 9:09:32 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 9:09:33 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 71
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 105
+[7/11/2012 9:09:35 PM]System.ArgumentException: Value does not fall within the expected range.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 37
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 92
+[7/11/2012 9:10:18 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 9:10:20 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 100
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 88
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 83
+[7/11/2012 9:10:25 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 71
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 105
+[7/11/2012 9:10:27 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 71
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 92
+[7/11/2012 9:10:30 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 9:10:33 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 71
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 29
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 105
+[7/11/2012 9:10:37 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 100
+   at binary_calculator.BinCalc.binToHexOct(String input, Int32 convertBaseTo, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 88
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 83
+[7/11/2012 9:10:53 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 9:59:15 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 9:59:55 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 428
+[7/11/2012 9:59:59 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:00:01 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 428
+[7/11/2012 10:00:31 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:00:32 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 428
+[7/11/2012 10:00:34 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:00:36 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 428
+[7/11/2012 10:06:56 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:07:00 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:07:09 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:07:10 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 428
+[7/11/2012 10:07:17 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:07:18 PM]System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at binary_calculator.BinCalc.binToDecFloat(String input, Int32 exponentSize, Int32 significandSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 289
+[7/11/2012 10:07:20 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 10:07:22 PM]System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at binary_calculator.BinCalc.binToDecFloat(String input, Int32 exponentSize, Int32 significandSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 289
+[7/11/2012 10:08:24 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/11/2012 11:13:45 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/12/2012 10:15:40 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/12/2012 10:15:43 AM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 429
+[7/12/2012 10:15:45 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/12/2012 10:15:46 AM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 429
+[7/12/2012 10:15:47 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[7/12/2012 10:16:00 AM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 429
+[7/12/2012 10:16:06 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.signedDecToBinTester(Int64 input, Int32 size) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 418
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 71
+[7/12/2012 10:16:45 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 53
+[9/1/2012 8:34:50 PM]System.ArgumentException: Value does not fall within the expected range.
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeXForErrorTesting, Int32 sizeYForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 63
+   at binary_calculator.BinCalc.hexOctToBin(String input, Int32 hexOrOct, Int32 sizeForErrorTesting) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 49
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 142
+[9/1/2012 8:35:02 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 526
+[9/1/2012 8:54:23 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 55
+[9/6/2012 3:09:55 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 55
+[10/9/2012 1:38:16 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.fromDecIntConversionPos(Int64 input, Int32 size, Int32 convertToBase) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 622
+   at binary_calculator.BinCalc.toAnyBaseInt(String input, Int32 size, Int32 convertToBase, Int32 convertFromBase) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 558
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 98
+[10/9/2012 1:40:51 PM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.fromDecIntConversionPos(Int64 input, Int32 size, Int32 convertToBase) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 622
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 94
+[10/9/2012 1:42:07 PM]System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.String.get_Chars(Int32 index)
+   at binary_calculator.BinCalc.signedBinToDecTester(String input, Int32 size) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 526
+[10/9/2012 1:55:21 PM]System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at binary_calculator.BinCalc.binToDecFloat(String input, Int32 exponentSize, Int32 significandSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\BinCalc.cs:line 350
+[10/9/2012 1:59:57 PM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\ProcessCalculatorInput.cs:line 55
