@@ -7,3 +7,10 @@ C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary
 C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\obj\x86\Debug\binary calculator.exe
 C:\Users\Joellius\documents\visual studio 2010\Projects\binary calculator\binary calculator\obj\x86\Debug\binary calculator.pdb
 C:\Users\Joellius\Documents\Visual Studio 2010\Projects\binary calculator\binary calculator\obj\x86\Debug\binary_calculator.MainForm.resources
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary calculator.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary calculator.pdb
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\bin\Debug\binary calculator.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\bin\Debug\binary calculator.pdb
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary_calculator.MainForm.resources
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary_calculator.Properties.Resources.resources
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary calculator.csproj.GenerateResource.Cache

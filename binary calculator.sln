@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binary calculator", "binary calculator\binary calculator.csproj", "{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binary calculator", "binarycalculator\binary calculator.csproj", "{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
