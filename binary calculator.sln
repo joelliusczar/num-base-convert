@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binary calculator", "binarycalculator\binary calculator.csproj", "{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBinCalc", "TestBinCalc\TestBinCalc.csproj", "{4D889C5D-DD1D-46EB-A33F-7E313D36F679}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}.Debug|x86.Build.0 = Debug|x86
 		{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}.Release|x86.ActiveCfg = Release|x86
 		{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}.Release|x86.Build.0 = Release|x86
+		{4D889C5D-DD1D-46EB-A33F-7E313D36F679}.Debug|x86.ActiveCfg = Debug|x86
+		{4D889C5D-DD1D-46EB-A33F-7E313D36F679}.Debug|x86.Build.0 = Debug|x86
+		{4D889C5D-DD1D-46EB-A33F-7E313D36F679}.Release|x86.ActiveCfg = Release|x86
+		{4D889C5D-DD1D-46EB-A33F-7E313D36F679}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,7 @@
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\bin\Debug\TestBinCalc.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\bin\Debug\TestBinCalc.pdb
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\bin\Debug\binary calculator.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\bin\Debug\binary calculator.pdb
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\obj\x86\Debug\TestBinCalc.csprojResolveAssemblyReference.cache
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\obj\x86\Debug\TestBinCalc.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\obj\x86\Debug\TestBinCalc.pdb

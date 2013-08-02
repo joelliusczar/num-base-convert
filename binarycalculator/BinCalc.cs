@@ -572,9 +572,12 @@ namespace binary_calculator
         //convert positive decimal integers to any other number base
         public static string fromDecIntConversionPos(long input, int size, int convertToBase)
         {
-            //this method does not work with negative numbers
-            //-1 as size basically removes size limits and the 0's in front.
-            //Ex. 8 would be represented as 1000 instead of 00001000 if the size was 8
+            /*note 1
+             * this method does not work with negative numbers.*/
+
+            /*Note 2
+             *Using -1 as size basically removes size limits and the 0's in front.
+            Ex. 8 would be represented as 1000 instead of 00001000 if the size was 8. */
 
             if (convertToBase >= 1) //there is no base one
             {
@@ -599,7 +602,7 @@ namespace binary_calculator
 
                         result = String.Concat(resultAsStack.ToArray());
                     }
-                    else //if number is being converted to binary and number of bits
+                    else //if number is being converted to binary and if number of bits
                         //is important
                     {
                         string[] resultAsArray = new string[size];
