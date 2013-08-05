@@ -14,3 +14,10 @@ C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\bin\Debug\b
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary_calculator.MainForm.resources
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary_calculator.Properties.Resources.resources
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\binarycalculator\obj\x86\Debug\binary calculator.csproj.GenerateResource.Cache
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\bin\Debug\binary calculator.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\bin\Debug\binary calculator.pdb
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\obj\x86\Debug\binary_calculator.MainForm.resources
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\obj\x86\Debug\binary_calculator.Properties.Resources.resources
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\obj\x86\Debug\binary calculator.csproj.GenerateResource.Cache
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\obj\x86\Debug\binary calculator.exe
+C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\obj\x86\Debug\binary calculator.pdb

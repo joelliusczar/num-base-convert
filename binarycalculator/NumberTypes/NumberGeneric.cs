@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Inputs;
 
 namespace binary_calculator.NumberTypes
 {
-    public abstract class NumberBase
+    public abstract class NumberGeneric
     {
         #region "constants for whole class"
         private const char FILL_STRING_WITH_THIS_CHAR__ZERO = '0',
@@ -27,26 +28,15 @@ namespace binary_calculator.NumberTypes
         #region "Properties"
 
         private string _representation;
-        private int _size;
-        private int _bitNumber;
         private int _numberBase;
+        private InputIntDecimal _input;
 
         public string representationOfNumber
         {
             get { return _representation; }
             set { _representation = value; }
         }
-
-        public int bitNumber
-        {
-            get { return _bitNumber; }
-            set 
-            {
-                if (value < 0) _bitNumber = 1;
-                else _bitNumber = value;
-            }
-        }
-
+        
         public int numberBase
         {
             get { return _numberBase; }
@@ -56,6 +46,11 @@ namespace binary_calculator.NumberTypes
             }
         }
 
+        public InputIntDecimal input
+        {
+            get { return _input; }
+            protected set { _input = value; }
+        }
 
         #endregion
 
@@ -65,10 +60,6 @@ namespace binary_calculator.NumberTypes
 
         #region "Private Methods"
 
-        private double MaxSize()
-        {
-            return Math.Pow(2, bitNumber);
-        }
 
         #endregion
 

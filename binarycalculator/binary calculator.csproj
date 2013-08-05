@@ -47,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinCalc.cs" />
+    <Compile Include="HandlingForIllegalInput\IllegalNumber.cs" />
+    <Compile Include="HandlingForIllegalInput\iOutOfRangeNumber.cs" />
+    <Compile Include="Inputs\InputDecimal.cs" />
+    <Compile Include="Inputs\InputGeneric.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,9 +58,10 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NumberTypes\Base10Int.cs" />
-    <Compile Include="NumberTypes\FixedSizeUnsignedInt.cs" />
-    <Compile Include="NumberTypes\NumberBase.cs" />
+    <Compile Include="NumberTypes\BinaryInt.cs" />
+    <Compile Include="NumberTypes\NumberGeneric.cs" />
     <Compile Include="NumberTypes\NoFixedSizeUnsignedInt.cs" />
+    <Compile Include="NumberTypes\NumberGenericInt.cs" />
     <Compile Include="OutSideValueException.cs" />
     <Compile Include="ProcessCalculatorInput.cs" />
     <Compile Include="Program.cs" />

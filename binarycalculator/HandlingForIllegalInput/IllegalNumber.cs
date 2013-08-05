@@ -6,8 +6,15 @@ using binary_calculator.NumberTypes;
 
 namespace binary_calculator.HandlingForIllegalInput
 {
-    class IllegalNumber: NumberBase, iOutOfRangeNumber
+    class IllegalNumber: NumberGeneric, iOutOfRangeNumber
     {
         public string errorMessage { get; private set; }
+
+        public override string ToString()
+        {
+            return errorMessage;
+        }
     }
+
+    
 }

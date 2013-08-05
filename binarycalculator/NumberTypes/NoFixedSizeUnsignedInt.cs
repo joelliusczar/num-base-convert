@@ -5,7 +5,7 @@ using System.Text;
 
 namespace binary_calculator.NumberTypes
 {
-    public class NoFixedSizeUnsignedInt: NumberBaseInt
+    public class NoFixedSizeUnsignedInt: NumberGenericInt
     {
         
 
@@ -27,7 +27,7 @@ namespace binary_calculator.NumberTypes
         }
 
 
-        public override NumberBase UpdateNumber(long input)
+        public override NumberGeneric UpdateNumber(long input)
         {
             representationOfNumber = fromDecIntConversionPos(input);
 

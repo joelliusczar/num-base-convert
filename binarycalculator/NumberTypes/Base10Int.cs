@@ -36,7 +36,7 @@ namespace binary_calculator.NumberTypes
         #endregion
 
         #region "Public Methods"
-        public static Type fromDecIntConversionPos<Type>(long input, int size) where Type: NumberBase, new()
+        public static Type fromDecIntConversionPos<Type>(long input, int size) where Type: NumberGeneric, new()
         {
             /*note 1
              * this method does not work with negative numbers.*/
@@ -44,7 +44,7 @@ namespace binary_calculator.NumberTypes
             /*Note 2
              *Using -1 as size basically removes size limits and the 0's in front.
             Ex. 8 would be represented as 1000 instead of 00001000 if the size was 8. */
-            NumberBase convertedBase = new Type();
+            NumberGeneric convertedBase = new Type();
 
             return (Type)convertedBase;
 

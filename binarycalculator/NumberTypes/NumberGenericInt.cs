@@ -5,10 +5,10 @@ using System.Text;
 
 namespace binary_calculator.NumberTypes
 {
-    public abstract class  NumberBaseInt: NumberBase
+    public abstract class  NumberGenericInt: NumberGeneric
     {
         #region "abstract"
-        public abstract NumberBase UpdateNumber(long input);
+        public abstract NumberGeneric UpdateNumber(long input);
         protected abstract string fromDecIntConversionPos(long input);
         #endregion
 
