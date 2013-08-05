@@ -5,3 +5,5 @@ C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\bin\Debug\binary
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\obj\x86\Debug\TestBinCalc.csprojResolveAssemblyReference.cache
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\obj\x86\Debug\TestBinCalc.exe
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\TestBinCalc\obj\x86\Debug\TestBinCalc.pdb
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\obj\x86\Debug\TestBinCalc.exe
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\obj\x86\Debug\TestBinCalc.pdb

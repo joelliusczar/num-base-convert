@@ -5,7 +5,7 @@ using System.Text;
 
 namespace binary_calculator.NumberTypes
 {
-    public class NoFixedSizeUnsignedInt: NumberBase
+    public class NoFixedSizeUnsignedInt: NumberBaseInt
     {
         
 
@@ -27,16 +27,16 @@ namespace binary_calculator.NumberTypes
         }
 
 
-        public string UpdateNumber(long input)
+        public override NumberBase UpdateNumber(long input)
         {
             representationOfNumber = fromDecIntConversionPos(input);
 
-            return representationOfNumber;
+            return this;
         }
         #endregion
 
         #region "Private Methods"
-        private string fromDecIntConversionPos(long input)
+        protected override string fromDecIntConversionPos(long input)
         {
             string result = "";
 

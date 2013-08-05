@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace numberTypes
+namespace binary_calculator.HandlingForIllegalInput
 {
-    class Program
+    interface iOutOfRangeNumber
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
