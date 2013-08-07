@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Inputs;
 
 namespace binary_calculator.NumberTypes
 {
@@ -14,29 +15,40 @@ namespace binary_calculator.NumberTypes
         #endregion
 
         #region "Properties"
+        private int _numberBase;
 
+        public int numberBase
+        {
+            get { return _numberBase; }
+            set
+            {
+                if (value <= MAX_BASE && value > 1) _numberBase = value;
+            }
+        }
+     
 
         #endregion
 
         #region "Public Methods"
 
-        public NoFixedSizeUnsignedInt(long input, int numberBase)
+        public NoFixedSizeUnsignedInt(InputIntDecimal input, int numberBase)
         {
             this.numberBase = numberBase;
-            representationOfNumber = fromDecIntConversionPos(input);
+            UpdateNumber(input);
         }
 
 
-        public override NumberGeneric UpdateNumber(long input)
+        public NumberGeneric UpdateNumber(InputIntDecimal input)
         {
-            representationOfNumber = fromDecIntConversionPos(input);
+            long toBeConverted = input.storedNumber;
+            representationOfNumber = fromDecIntConversionPos(toBeConverted);
 
             return this;
         }
         #endregion
 
         #region "Private Methods"
-        protected override string fromDecIntConversionPos(long input)
+        protected string fromDecIntConversionPos(long input)
         {
             string result = "";
 

@@ -6,7 +6,7 @@ using binary_calculator.Inputs;
 
 namespace binary_calculator.NumberTypes
 {
-    class BinaryInt: NumberGenericInt
+    public class BinaryInt: NumberGenericInt
     {
         #region "constants for whole class"
 
@@ -23,20 +23,32 @@ namespace binary_calculator.NumberTypes
         public BinaryInt(InputIntDecimal input)
         {
             this.input = input;
+            UpdateNumber(input);
 
         }
 
-        public override NumberGeneric UpdateNumber(long input)
+        public NumberGeneric UpdateNumber(InputIntDecimal input)
         {
-            representationOfNumber = fromDecIntConversionPos(input);
+            long toBeConverted = input.storedNumber;
+            int bitNumber = input.bitNumber;
+            representationOfNumber = fromDecIntConversionPos(toBeConverted,bitNumber);
+
             return this;
         }
         #endregion
 
         #region "Private Methods"
-        protected override string fromDecIntConversionPos(long input)
+        protected string fromDecIntConversionPos(long input, int bitNumber = 8)
         {
             string result = "";
+            Stack<string> resultAsStack = new Stack<string>();
+            for (int i = 0; i < bitNumber; i++)
+            {
+                string temp = (input % 2).ToString();
+                resultAsStack.Push(temp);
+                input = (long)(input / 2);
+            }
+            result = String.Concat(resultAsStack.ToArray());
 
             return result;
         }

@@ -49,7 +49,7 @@
     <Compile Include="BinCalc.cs" />
     <Compile Include="HandlingForIllegalInput\IllegalNumber.cs" />
     <Compile Include="HandlingForIllegalInput\iOutOfRangeNumber.cs" />
-    <Compile Include="Inputs\InputDecimal.cs" />
+    <Compile Include="Inputs\InputIntDecimal.cs" />
     <Compile Include="Inputs\InputGeneric.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

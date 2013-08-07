@@ -9,14 +9,14 @@ namespace binary_calculator.NumberTypes
     public abstract class NumberGeneric
     {
         #region "constants for whole class"
-        private const char FILL_STRING_WITH_THIS_CHAR__ZERO = '0',
+        protected const char FILL_STRING_WITH_THIS_CHAR__ZERO = '0',
             FILL_STRING_WITH_THIS_CHAR__ONE = '1',
             SEARCH_FOR_THIS_CHAR__ZERO = '0',
             SEARCH_FOR_THIS_CHAR__ONE = '1',
             NEGATIVE_SIGN_BIT = '1',
             POSITIVE_SIGN_BIT = '0',
             IMPLIED_ONE_IN_FRONT = '1';
-        private const int NO_FIXED_SIZE_FOR_INTEGER = -1,
+        protected const int NO_FIXED_SIZE_FOR_INTEGER = -1,
          NECESSARY_EXPONENT_ADJUSTMENT = 1,
          NECESSARY_EXCESS_ADJUSTMENT = 1,
          EXTRA_BIT_FOR_SIGN = 1,
@@ -28,7 +28,7 @@ namespace binary_calculator.NumberTypes
         #region "Properties"
 
         private string _representation;
-        private int _numberBase;
+
         private InputIntDecimal _input;
 
         public string representationOfNumber
@@ -37,14 +37,7 @@ namespace binary_calculator.NumberTypes
             set { _representation = value; }
         }
         
-        public int numberBase
-        {
-            get { return _numberBase; }
-            set 
-            {
-                if (value <= MAX_BASE && value > 1) _numberBase = value;
-            }
-        }
+        
 
         public InputIntDecimal input
         {

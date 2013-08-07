@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.NumberTypes;
+using binary_calculator.Inputs;
 
 namespace TestBinCalc
 {
@@ -10,64 +11,109 @@ namespace TestBinCalc
     {
         static void Main(string[] args)
         {
-            TestNoFixedSizeUnsignedInt();
+            TestBinaryInt();
             Console.ReadKey();
         }
 
-        private static void TestNoFixedSizeUnsignedInt()
+        private static void TestBinaryInt()
         {
-            long testInput = 627732894;
-            int testBase = 30;
-            string expectedValue = "potato";
+            InputIntDecimal input = new InputIntDecimal(8, "4");
 
-            NoFixedSizeUnsignedInt number1 = new NoFixedSizeUnsignedInt(testInput, testBase); //should display 'potato'
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                ,testInput,testBase,expectedValue, number1.representationOfNumber);
+            BinaryInt bin = new BinaryInt(input);
+            Console.WriteLine(bin);
 
-            testBase = 43;
-            number1.numberBase = testBase;
-            Console.WriteLine("Attempt to set base as: {0}. Actual base is: {1}",testBase,number1.numberBase);
-
-            testBase = 2;
-
-            testInput = 1;
-            expectedValue = "1";
-
-            number1.numberBase = testBase;
-            number1.UpdateNumber(testInput);
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                , testInput, testBase, expectedValue, number1.representationOfNumber);
-
-            testInput = 2;
-            expectedValue = "10";
-            number1.UpdateNumber(testInput);
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                , testInput, testBase, expectedValue, number1.representationOfNumber);
-
-            testInput = 3;
-            expectedValue = "11";
-            number1.UpdateNumber(testInput);
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                , testInput, testBase, expectedValue, number1.representationOfNumber);
-
-            testInput = 4;
-            expectedValue = "100";
-            number1.UpdateNumber(testInput);
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                , testInput, testBase, expectedValue, number1.representationOfNumber);
-
-            testInput = 7;
-            expectedValue = "111";
-            number1.UpdateNumber(testInput);
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                , testInput, testBase, expectedValue, number1.representationOfNumber);
-
-            testInput = 32;
-            expectedValue = "100000";
-            number1.UpdateNumber(testInput);
-            Console.WriteLine("Expected value for {0} when the base is: {1}  is: {2}. Result is: {3}"
-                , testInput, testBase, expectedValue, number1.representationOfNumber);
-            
         }
+
+        private static void TestDecimalIntInput()
+        {
+            InputIntDecimal a = new InputIntDecimal();
+
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:"+ 
+            "{1}\nstoredInput should be blank and is: {2}\nstoreNumber should be 0 and is: {3}\n\n\n"
+                , a.bitNumber,a.maxSize,a.storedInput,a.storedNumber);
+
+            string testNumber = "127";
+            string expectedStoredInput = "127";
+            long expectedStoredNumber = 127;
+            a = new InputIntDecimal(8,testNumber);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber,testNumber,expectedStoredInput,expectedStoredNumber );
+
+            testNumber = "256";
+            expectedStoredInput = "blank";
+            expectedStoredNumber = 0;
+            a = new InputIntDecimal(8, testNumber);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testNumber, expectedStoredInput, expectedStoredNumber);
+
+            testNumber = "2";
+            expectedStoredInput = "2";
+            expectedStoredNumber = 2;
+            a = new InputIntDecimal(8, testNumber);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testNumber, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+
+            char testChar = '5';
+            expectedStoredInput = "25";
+            expectedStoredNumber = 25;
+            a.Add(testChar);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testChar, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+
+            testChar = '6';
+            expectedStoredInput = "25";
+            expectedStoredNumber = 25;
+            a.Add(testChar);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testChar, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+
+            testChar = '1';
+            expectedStoredInput = "251";
+            expectedStoredNumber = 251;
+            a.Add(testChar);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testChar, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+
+
+            expectedStoredInput = "25";
+            expectedStoredNumber = 25;
+            a.deleteChar();
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testChar, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+
+            testChar = '5';
+            expectedStoredInput = "255";
+            expectedStoredNumber = 255;
+            a.Add(testChar);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testChar, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+
+
+            a.deleteChar();
+            testChar = 'z';
+            expectedStoredInput = "25";
+            expectedStoredNumber = 25;
+            a.Add(testChar);
+            Console.Write("bitNumber should be 8 and is: {0}.\nmaxSize should be 256 and is:{1}\n" +
+            "storedInput should be {5} and is: {2}\nstoreNumber should be {6} and is: {3}\ntestNumber is: {4}\n\n\n"
+                , a.bitNumber, a.maxSize, a.storedInput, a.storedNumber, testChar, expectedStoredInput, expectedStoredNumber);
+            Console.ReadKey();
+        }
+
+
     }
 }

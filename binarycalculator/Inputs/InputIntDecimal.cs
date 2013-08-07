@@ -5,7 +5,7 @@ using System.Text;
 
 namespace binary_calculator.Inputs
 {
-    public class InputIntDecimal
+    public class InputIntDecimal:InputGeneric
     {
 
         #region "constants for whole class"
@@ -13,25 +13,76 @@ namespace binary_calculator.Inputs
         #endregion
 
         #region "Properties"
-        private int myVar;
+        private long _storedNumber;
 
-        public int MyProperty
+        public long storedNumber
         {
-            get { return myVar; }
-            set { myVar = value; }
+            get { return _storedNumber; }
+            private set { _storedNumber = value; }
         }
-        
+
+        private string _storedInput;
+
+        public string storedInput
+        {
+            get { return _storedInput; }
+            private set 
+            {
+                long temp;
+                bool validLong = long.TryParse(value, out temp);
+                if (TestAgainstSize(temp)&&validLong)
+                {
+                    _storedInput = value;
+                    storedNumber = temp;
+                }
+            }
+        }
 
         #endregion
 
         #region "Public Methods"
-        public InputIntDecimal()
+        public InputIntDecimal(int bitNumber = 8, string input = "")
         {
+            this.bitNumber = bitNumber;
+            storedInput = input;
+        }
+
+        
+
+        public void ClearInput()
+        {
+            storedInput = "";
+        }
+
+        public void Add(char digit)
+        {
+
+            string storeConcat = string.Concat(storedInput, digit.ToString());
+            storedInput = storeConcat;
+
+        }
+
+        public void deleteChar()
+        {
+            string temp = storedInput.Substring(0, storedInput.Length - 1);
+            storedInput = temp;
+            
         }
         #endregion
 
         #region "Private Methods"
+        private void copyInput(InputIntDecimal input)
+        {
+            this.bitNumber = input.bitNumber;
+            this.storedInput = input.storedInput;
+        }
 
+        private bool TestAgainstSize(long value)
+        {
+            return (value < maxSize);
+        }
+
+        
         #endregion
         
     }

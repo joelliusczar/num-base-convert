@@ -16,6 +16,7 @@ namespace binary_calculator.Inputs
 
             #region "Properties"
             private int _bitNumber;
+            private int _maxSize;
 
             public int bitNumber
             {
@@ -30,11 +31,10 @@ namespace binary_calculator.Inputs
                     else
                     {
                         _bitNumber = value;
+                        maxSize = (int)Math.Pow(2, bitNumber);
                     }
                 }
             }
-
-            private int _maxSize;
 
             public int maxSize
             {

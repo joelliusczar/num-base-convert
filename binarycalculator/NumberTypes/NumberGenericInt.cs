@@ -7,9 +7,10 @@ namespace binary_calculator.NumberTypes
 {
     public abstract class  NumberGenericInt: NumberGeneric
     {
+
+
         #region "abstract"
-        public abstract NumberGeneric UpdateNumber(long input);
-        protected abstract string fromDecIntConversionPos(long input);
+        
         #endregion
 
         #region "overrides"
