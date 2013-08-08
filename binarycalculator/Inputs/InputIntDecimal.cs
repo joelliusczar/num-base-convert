@@ -29,12 +29,14 @@ namespace binary_calculator.Inputs
             private set 
             {
                 long temp;
-                bool validLong = long.TryParse(value, out temp);
+                if ( value.Length == 0) value = "0";
+                bool validLong = (long.TryParse(value, out temp));
                 if (TestAgainstSize(temp)&&validLong)
                 {
                     _storedInput = value;
                     storedNumber = temp;
                 }
+                
             }
         }
 
@@ -51,22 +53,19 @@ namespace binary_calculator.Inputs
 
         public void ClearInput()
         {
-            storedInput = "";
+            storedInput = "0";
         }
 
-        public void Add(char digit)
+        public void AddChar(char digit)
         {
-
             string storeConcat = string.Concat(storedInput, digit.ToString());
             storedInput = storeConcat;
-
         }
 
         public void deleteChar()
-        {
-            string temp = storedInput.Substring(0, storedInput.Length - 1);
-            storedInput = temp;
-            
+        {           
+                string temp = storedInput.Substring(0, storedInput.Length - 1);
+                storedInput = temp; 
         }
         #endregion
 
@@ -79,7 +78,7 @@ namespace binary_calculator.Inputs
 
         private bool TestAgainstSize(long value)
         {
-            return (value < maxSize);
+            return (value < maxSize)&&(value >=0);
         }
 
         
