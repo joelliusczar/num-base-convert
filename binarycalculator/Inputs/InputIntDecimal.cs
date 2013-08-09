@@ -14,14 +14,15 @@ namespace binary_calculator.Inputs
 
         #region "Properties"
         private long _storedNumber;
-
+        private string _storedInput;
+        private int _bitNumber;
+        private int _maxSize;
+        
         public long storedNumber
         {
             get { return _storedNumber; }
             private set { _storedNumber = value; }
-        }
-
-        private string _storedInput;
+        }        
 
         public string storedInput
         {
@@ -38,6 +39,30 @@ namespace binary_calculator.Inputs
                 }
                 
             }
+        }
+
+        public int bitNumber
+        {
+            get { return _bitNumber; }
+            set
+            {
+                if (value < 0)
+                {
+                    _bitNumber = 1;
+                    maxSize = (int)Math.Pow(2, bitNumber);
+                }
+                else
+                {
+                    _bitNumber = value;
+                    maxSize = (int)Math.Pow(2, bitNumber);
+                }
+            }
+        }
+
+        public int maxSize
+        {
+            get { return _maxSize; }
+            private set { _maxSize = value; }
         }
 
         #endregion

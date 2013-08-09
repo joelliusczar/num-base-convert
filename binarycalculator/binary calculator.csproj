@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinCalc.cs" />
+    <Compile Include="Filters.cs" />
     <Compile Include="HandlingForIllegalInput\IllegalNumber.cs" />
     <Compile Include="HandlingForIllegalInput\iOutOfRangeNumber.cs" />
+    <Compile Include="Inputs\InputBinary.cs" />
     <Compile Include="Inputs\InputIntDecimal.cs" />
     <Compile Include="Inputs\InputGeneric.cs" />
     <Compile Include="Inputs\InputIntNonDecimal.cs" />
