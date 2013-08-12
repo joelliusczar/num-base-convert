@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace binary_calculator
+namespace binary_calculator.dictionaries
 {
-    public enum NumberBaseChoice 
-    {
-        BASE_TWO = 2,
-        BASE_EIGHT = 8,
-        BASE_SIXTEEN = 16
-    }
+    
 
     public class Filters
     {

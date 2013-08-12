@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using binary_calculator.Inputs;
+using binary_calculator.Wrappers;
 
 namespace binary_calculator.NumberTypes
 {
@@ -20,14 +20,14 @@ namespace binary_calculator.NumberTypes
         #endregion
 
         #region "Public Methods"
-        public BinaryInt(InputIntDecimal input)
+        public BinaryInt(WrapperIntDecimal input)
         {
             this.input = input;
             UpdateNumber(input);
 
         }
 
-        public NumberGeneric UpdateNumber(InputIntDecimal input)
+        public NumberGeneric UpdateNumber(WrapperIntDecimal input)
         {
             long toBeConverted = input.storedNumber;
             int bitNumber = input.bitNumber;

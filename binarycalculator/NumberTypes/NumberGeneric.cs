@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using binary_calculator.Inputs;
+using binary_calculator.Wrappers;
 
 namespace binary_calculator.NumberTypes
 {
@@ -29,7 +29,7 @@ namespace binary_calculator.NumberTypes
 
         private string _representation;
 
-        private InputIntDecimal _input;
+        private WrapperIntDecimal _input;
 
         public string representationOfNumber
         {
@@ -39,7 +39,7 @@ namespace binary_calculator.NumberTypes
         
         
 
-        public InputIntDecimal input
+        public WrapperIntDecimal input
         {
             get { return _input; }
             protected set { _input = value; }

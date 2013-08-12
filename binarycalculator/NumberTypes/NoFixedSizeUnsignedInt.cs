@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using binary_calculator.Inputs;
+using binary_calculator.Wrappers;
 
 namespace binary_calculator.NumberTypes
 {
@@ -31,14 +31,14 @@ namespace binary_calculator.NumberTypes
 
         #region "Public Methods"
 
-        public NoFixedSizeUnsignedInt(InputIntDecimal input, int numberBase)
+        public NoFixedSizeUnsignedInt(WrapperIntDecimal input, int numberBase)
         {
             this.numberBase = numberBase;
             UpdateNumber(input);
         }
 
 
-        public NumberGeneric UpdateNumber(InputIntDecimal input)
+        public NumberGeneric UpdateNumber(WrapperIntDecimal input)
         {
             long toBeConverted = input.storedNumber;
             representationOfNumber = fromDecIntConversionPos(toBeConverted);

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace binary_calculator.Inputs
+namespace binary_calculator.Wrappers
 {
-    public abstract class InputGeneric
+    public abstract class WrapperGeneric
     {
         
 
