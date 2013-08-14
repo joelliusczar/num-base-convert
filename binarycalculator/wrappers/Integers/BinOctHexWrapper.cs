@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 
 
-namespace binary_calculator.Wrappers
+namespace binary_calculator.Wrappers.Integers
 {
-    public class WrapperIntNonDecimal: WrapperGeneric
+    public class BinOctHexWrapper: GenericWrapper
     {
         
 
@@ -18,15 +18,15 @@ namespace binary_calculator.Wrappers
 
         #region "Properties"
 
-        private int _allowedLength;
+        private int _allowedNumberOfBits;
         private string _storedInput;
         private NumberBaseChoice _choice;
         private binary_calculator.dictionaries.Filters _filter;
 
-        public int allowedLength
+        public int allowedNumberOfBits
         {
-            get { return _allowedLength; }
-            set { _allowedLength = value; }
+            get { return _allowedNumberOfBits; }
+            set { _allowedNumberOfBits = value; }
         }
 
         public string storedInput
@@ -42,7 +42,7 @@ namespace binary_calculator.Wrappers
                 bool inputAllowed = InputAllCharsLegal(value);
                 if (inputAllowed)
                 {
-                    if (value.Length <= allowedLength) _storedInput = value;
+                    if (value.Length <= allowedNumberOfBits) _storedInput = value;
                     if (value.Length == 0) _storedInput = "0";
                 }
 
@@ -52,7 +52,10 @@ namespace binary_calculator.Wrappers
         public NumberBaseChoice baseChoice
         {
             get { return _choice; }
-            set { _choice = value; }
+            set 
+            { 
+                _choice = value;
+            }
         }
 
         private binary_calculator.dictionaries.Filters filter
@@ -73,10 +76,10 @@ namespace binary_calculator.Wrappers
 
         #region "Public Methods"
 
-        public WrapperIntNonDecimal(NumberBaseChoice choice,int size = 8, string input = "")
+        public BinOctHexWrapper(NumberBaseChoice choice,int size = 8, string input = "")
         {
             baseChoice = choice;
-            allowedLength = size;
+            allowedNumberOfBits = size;
             storedInput = input;
         }
 
@@ -112,6 +115,17 @@ namespace binary_calculator.Wrappers
             string illegalChars = filter.GetIllegalChars(baseChoice);
 
             result = input.All(c => !illegalChars.Contains(c)); //this can be fixed to make it quicker
+
+            return result;
+        }
+
+        private bool IsSizeLegal(int size, NumberBaseChoice type)
+        {
+            bool result = true;
+
+            int denominator = (int)Math.Log((double)type, 2);
+
+
 
             return result;
         }

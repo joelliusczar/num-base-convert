@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace binary_calculator.Wrappers
+namespace binary_calculator.Wrappers.Integers
 {
-    public class WrapperIntDecimal:WrapperGeneric
+    public class DecWrapper:GenericWrapper
     {
 
         #region "constants for whole class"
@@ -68,7 +68,7 @@ namespace binary_calculator.Wrappers
         #endregion
 
         #region "Public Methods"
-        public WrapperIntDecimal(int bitNumber = 8, string input = "")
+        public DecWrapper(int bitNumber = 8, string input = "")
         {
             this.bitNumber = bitNumber;
             storedInput = input;
@@ -100,7 +100,7 @@ namespace binary_calculator.Wrappers
         #endregion
 
         #region "Private Methods"
-        private void copyInput(WrapperIntDecimal input)
+        private void copyInput(DecWrapper input)
         {
             this.bitNumber = input.bitNumber;
             this.storedInput = input.storedInput;

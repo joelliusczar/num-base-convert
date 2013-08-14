@@ -1,0 +1,18 @@
+NO_FIXED_SIZE_FOR_INTEGER = -1,
+         NECESSARY_EXPONENT_ADJUSTMENT = 1,
+         NECESSARY_EXCESS_ADJUSTMENT = 1,
+         EXTRA_BIT_FOR_SIGN = 1,
+         FIRST_CHAR_LOCATION = 1,
+
+,
+         NECESSARY_RANGE_ADJUSTMENT = 1
+
+
+
+protected const char FILL_STRING_WITH_THIS_CHAR__ZERO = '0',
+            FILL_STRING_WITH_THIS_CHAR__ONE = '1',
+            SEARCH_FOR_THIS_CHAR__ZERO = '0',
+            SEARCH_FOR_THIS_CHAR__ONE = '1',
+            NEGATIVE_SIGN_BIT = '1',
+            POSITIVE_SIGN_BIT = '0',
+            IMPLIED_ONE_IN_FRONT = '1';

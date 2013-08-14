@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using binary_calculator.Wrappers;
+using binary_calculator.Wrappers.Integers;
 
-namespace binary_calculator.NumberTypes
+namespace binary_calculator.Converters.Integers
 {
-    public class BinaryInt: NumberGenericInt
+    public class ConverterToBin: GenericIntegerConverter
     {
         #region "constants for whole class"
 
@@ -20,25 +20,23 @@ namespace binary_calculator.NumberTypes
         #endregion
 
         #region "Public Methods"
-        public BinaryInt(WrapperIntDecimal input)
+        public ConverterToBin()
         {
-            this.input = input;
-            UpdateNumber(input);
-
         }
 
-        public NumberGeneric UpdateNumber(WrapperIntDecimal input)
+        public BinOctHexWrapper FromDecIntPos(DecWrapper input)
         {
             long toBeConverted = input.storedNumber;
             int bitNumber = input.bitNumber;
-            representationOfNumber = fromDecIntConversionPos(toBeConverted,bitNumber);
+            string result = Convert(toBeConverted, bitNumber);
+            BinOctHexWrapper output = new BinOctHexWrapper(NumberBaseChoice.BASE_TWO, bitNumber, result);
 
-            return this;
+            return output;
         }
         #endregion
 
         #region "Private Methods"
-        protected string fromDecIntConversionPos(long input, int bitNumber = 8)
+        private string Convert(long input, int bitNumber = 8)
         {
             string result = "";
             Stack<string> resultAsStack = new Stack<string>();

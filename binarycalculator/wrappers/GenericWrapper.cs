@@ -5,7 +5,7 @@ using System.Text;
 
 namespace binary_calculator.Wrappers
 {
-    public abstract class WrapperGeneric
+    public abstract class GenericWrapper
     {
         
 

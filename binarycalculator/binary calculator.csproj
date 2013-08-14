@@ -51,9 +51,9 @@
     <Compile Include="dictionaries\Filters.cs" />
     <Compile Include="HandlingForIllegalInput\IllegalNumber.cs" />
     <Compile Include="HandlingForIllegalInput\iOutOfRangeNumber.cs" />
-    <Compile Include="Inputs\InputIntDecimal.cs" />
-    <Compile Include="Inputs\InputGeneric.cs" />
-    <Compile Include="Inputs\InputIntNonDecimal.cs" />
+    <Compile Include="wrappers\Integers\DecWrapper.cs" />
+    <Compile Include="wrappers\GenericWrapper.cs" />
+    <Compile Include="wrappers\Integers\BinOctHexWrapper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,11 +61,11 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NumberBaseGlobalEnums.cs" />
-    <Compile Include="NumberTypes\DecimalInt.cs" />
-    <Compile Include="NumberTypes\BinaryInt.cs" />
-    <Compile Include="NumberTypes\NumberGeneric.cs" />
-    <Compile Include="NumberTypes\NoFixedSizeUnsignedInt.cs" />
-    <Compile Include="NumberTypes\NumberGenericInt.cs" />
+    <Compile Include="Converters\Integers\ConverterToDec.cs" />
+    <Compile Include="Converters\Integers\ConverterToBin.cs" />
+    <Compile Include="Converters\GenericConverter.cs" />
+    <Compile Include="Unused\NoFixedSizeUnsignedInt.cs" />
+    <Compile Include="Converters\Integers\GenericIntegerConverter.cs" />
     <Compile Include="OutSideValueException.cs" />
     <Compile Include="ProcessCalculatorInput.cs" />
     <Compile Include="Program.cs" />
@@ -92,6 +92,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
