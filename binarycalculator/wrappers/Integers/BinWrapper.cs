@@ -6,15 +6,12 @@ using System.Text;
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class BinOctHexWrapper: GenericWrapper
+    public class BinWrapper: GenericWrapper
     {
         
-
-
         #region "constants for whole class"
 
         #endregion
-
 
         #region "Properties"
 
@@ -76,7 +73,7 @@ namespace binary_calculator.Wrappers.Integers
 
         #region "Public Methods"
 
-        public BinOctHexWrapper(NumberBaseChoice choice,int size = 8, string input = "")
+        public BinWrapper(NumberBaseChoice choice,int size = 8, string input = "")
         {
             baseChoice = choice;
             allowedNumberOfBits = size;
@@ -117,18 +114,7 @@ namespace binary_calculator.Wrappers.Integers
             result = input.All(c => !illegalChars.Contains(c)); //this can be fixed to make it quicker
 
             return result;
-        }
-
-        private bool IsSizeLegal(int size, NumberBaseChoice type)
-        {
-            bool result = true;
-
-            int denominator = (int)Math.Log((double)type, 2);
-
-
-
-            return result;
-        }
+        }        
 
         #endregion
     }

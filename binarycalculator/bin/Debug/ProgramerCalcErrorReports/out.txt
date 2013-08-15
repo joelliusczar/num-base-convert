@@ -344,3 +344,27 @@ Parameter name: length
    at binary_calculator.BinCalc.toDecIntAndFract(String input, Int32 convertFromBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 742
    at binary_calculator.BinCalc.toAnyBaseIntAndFract(String input, Int32 size, Int32 convertToBase, Int32 convertFromBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 563
    at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 166
+[8/15/2013 8:55:48 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 55
+[8/15/2013 8:56:18 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.fromDecIntConversionPos(Int64 input, Int32 size, Int32 convertToBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 625
+   at binary_calculator.BinCalc.toAnyBaseInt(String input, Int32 size, Int32 convertToBase, Int32 convertFromBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 558
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 98
+[8/15/2013 9:02:26 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 55
+[8/15/2013 9:02:37 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.fromDecIntConversionPos(Int64 input, Int32 size, Int32 convertToBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 625
+   at binary_calculator.BinCalc.toAnyBaseInt(String input, Int32 size, Int32 convertToBase, Int32 convertFromBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 558
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 98
+[8/15/2013 9:02:40 AM]System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s)
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 55
+[8/15/2013 9:02:46 AM]binary_calculator.OutsideValueException: Error in the application.
+   at binary_calculator.BinCalc.fromDecIntConversionPos(Int64 input, Int32 size, Int32 convertToBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 625
+   at binary_calculator.BinCalc.toAnyBaseInt(String input, Int32 size, Int32 convertToBase, Int32 convertFromBase) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\BinCalc.cs:line 558
+   at binary_calculator.ProcessCalculatorInput.processInputToBeConverted(String input, Int32 dataType, Int32 convertFromBase, Int32 convertToBase, Int32 size, Int32 exponentSize) in C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\binarycalculator\ProcessCalculatorInput.cs:line 98

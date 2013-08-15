@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using binary_calculator.Wrappers.Integers;
 
+
 namespace binary_calculator.Converters.Integers
 {
     public class ConverterToBin: GenericIntegerConverter
@@ -24,15 +25,22 @@ namespace binary_calculator.Converters.Integers
         {
         }
 
-        public BinOctHexWrapper FromDecIntPos(DecWrapper input)
+        public BinWrapper FromDecIntPos(DecWrapper input)
         {
             long toBeConverted = input.storedNumber;
             int bitNumber = input.bitNumber;
             string result = Convert(toBeConverted, bitNumber);
-            BinOctHexWrapper output = new BinOctHexWrapper(NumberBaseChoice.BASE_TWO, bitNumber, result);
+            BinWrapper output = new BinWrapper(NumberBaseChoice.BASE_TWO, bitNumber, result);
 
             return output;
         }
+
+        //public BinWrapper FromPowerOfTwoIntPos(PowerOfTwoWrapper input)
+        //{
+
+        //}
+
+
         #endregion
 
         #region "Private Methods"
@@ -49,6 +57,52 @@ namespace binary_calculator.Converters.Integers
             result = String.Concat(resultAsStack.ToArray());
 
             return result;
+        }
+
+        private string Convert(string input,NumberBaseChoice choice)
+        {
+            string result = "";
+            int numBase = (int)choice;
+            int exponent = 0;
+            int dictionaryValueSize = 4;
+
+            //get the power of 2. Ex. 8=2^3, 16=2^4
+            exponent = (int)Math.Log(numBase, 2);
+
+            /*Note on substringStartingPoint
+             * 4 is the number of bin digits for each hex char
+            if exponent = 4(for hex) then substringStartingPoint = 0
+            if exponent= 3(for oct) then substringStartingPoint = 1*/
+            int substringStartingPoint = dictionaryValueSize - exponent;
+
+            //load dictionary of binary representations of each oct and hex character
+            dictionaries.DictionaryForBinary binDictionary = new dictionaries.DictionaryForBinary();
+
+            //one string of 1's and 0's for each hex or oct character
+            Stack<string> binStack = new Stack<string>();
+            string temp;
+
+            //convert each character to binary
+            foreach (char digit in input)
+            {
+                temp = binDictionary.GetEquivalent(digit);
+                temp = temp.Substring(substringStartingPoint); //see note on substringStartingPoint
+                binStack.Push(temp);
+            }
+
+            result = string.Concat(binStack.ToArray());
+            result = outputAdjuster(result);
+
+            return result;
+        }
+
+        //this method is to correct errors that got introduced after converting from octal       
+        private static string outputAdjuster(string strToFix)
+        {
+            //4 is the number of bin digits for each hex char
+            int correctStrStartingPoint = strToFix.Length % 4;
+
+            return strToFix.Substring(correctStrStartingPoint);
         }
         #endregion
     }

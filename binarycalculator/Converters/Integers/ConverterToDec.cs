@@ -20,7 +20,7 @@ namespace binary_calculator.Converters.Integers
 
         #region "Public Methods"
 
-        public DecWrapper ToDecIntPos(BinOctHexWrapper input)
+        public DecWrapper ToDecIntPos(BinWrapper input)
         {
             int size = input.allowedNumberOfBits;
             int convertFromBase = (int)input.baseChoice;
