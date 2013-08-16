@@ -20,10 +20,10 @@ namespace binary_calculator.Converters.Integers
 
         #region "Public Methods"
 
-        public DecWrapper ToDecIntPos(BinWrapper input)
+        public DecWrapper ToDecFromBinIntPos(BinWrapper input)
         {
             int size = input.allowedNumberOfBits;
-            int convertFromBase = (int)input.baseChoice;
+            int convertFromBase = 2;
             string toBeConverted = input.storedInput;
             long result = Convert(toBeConverted,convertFromBase);
             DecWrapper output = new DecWrapper(size, result.ToString());

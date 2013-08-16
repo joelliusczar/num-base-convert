@@ -6,7 +6,7 @@ using System.Text;
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class BinWrapper: GenericWrapper
+    public class BinWrapper : GenericIntegerWrapper
     {
         
         #region "constants for whole class"
@@ -15,18 +15,8 @@ namespace binary_calculator.Wrappers.Integers
 
         #region "Properties"
 
-        private int _allowedNumberOfBits;
-        private string _storedInput;
-        private NumberBaseChoice _choice;
-        private binary_calculator.dictionaries.Filters _filter;
 
-        public int allowedNumberOfBits
-        {
-            get { return _allowedNumberOfBits; }
-            set { _allowedNumberOfBits = value; }
-        }
-
-        public string storedInput
+        public override string storedInput
         {
             get { return _storedInput; }
             protected set 
@@ -36,7 +26,7 @@ namespace binary_calculator.Wrappers.Integers
                     _storedInput = "0";
                 }
 
-                bool inputAllowed = InputAllCharsLegal(value);
+                bool inputAllowed = InputAllCharsLegal(value,NumberBaseChoice.BASE_TWO);
                 if (inputAllowed)
                 {
                     if (value.Length <= allowedNumberOfBits) _storedInput = value;
@@ -46,75 +36,23 @@ namespace binary_calculator.Wrappers.Integers
             }
         }
 
-        public NumberBaseChoice baseChoice
-        {
-            get { return _choice; }
-            set 
-            { 
-                _choice = value;
-            }
-        }
-
-        private binary_calculator.dictionaries.Filters filter
-        {
-            get 
-            {
-                if (_filter == null)
-                    _filter = new binary_calculator.dictionaries.Filters();
-
-                return _filter;
-            }
-            set { _filter = value; }
-        }
-
-
-
+        
         #endregion
 
         #region "Public Methods"
 
-        public BinWrapper(NumberBaseChoice choice,int size = 8, string input = "")
+        public BinWrapper(int size = 8, string input = "")
         {
-            baseChoice = choice;
+            
             allowedNumberOfBits = size;
             storedInput = input;
         }
 
-        public void ClearInput()
-        {
-            storedInput = "0";
-        }
 
-        public void AddChar(char digit)
-        {
-            string storeConcat = string.Concat(storedInput, digit.ToString());
-            storedInput = storeConcat;
-        }
-
-        public void deleteChar()
-        {
-            string temp = storedInput.Substring(0, storedInput.Length - 1);
-            storedInput = temp;
-        }
-
-        public override string ToString()
-        {
-            return storedInput;
-        }
         #endregion
 
         #region "Private Methods"
-        protected bool InputAllCharsLegal(string input)
-        {
-            bool result = true;
-
-            
-            string illegalChars = filter.GetIllegalChars(baseChoice);
-
-            result = input.All(c => !illegalChars.Contains(c)); //this can be fixed to make it quicker
-
-            return result;
-        }        
+          
 
         #endregion
     }

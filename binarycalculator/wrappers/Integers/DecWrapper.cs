@@ -5,7 +5,7 @@ using System.Text;
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class DecWrapper:GenericWrapper
+    public class DecWrapper : GenericIntegerWrapper
     {
 
         #region "constants for whole class"
@@ -14,8 +14,6 @@ namespace binary_calculator.Wrappers.Integers
 
         #region "Properties"
         private long _storedNumber;
-        private string _storedInput;
-        private int _bitNumber;
         private int _maxSize;
         
         public long storedNumber
@@ -24,10 +22,10 @@ namespace binary_calculator.Wrappers.Integers
             private set { _storedNumber = value; }
         }        
 
-        public string storedInput
+        public override string storedInput
         {
             get { return _storedInput; }
-            private set 
+            protected set 
             {
                 long temp;
                 if ( value.Length == 0) value = "0";
@@ -41,20 +39,20 @@ namespace binary_calculator.Wrappers.Integers
             }
         }
 
-        public int bitNumber
+        public override int allowedNumberOfBits
         {
-            get { return _bitNumber; }
+            get { return _allowedNumberOfBits; }
             set
             {
                 if (value < 0)
                 {
-                    _bitNumber = 1;
-                    maxSize = (int)Math.Pow(2, bitNumber);
+                    _allowedNumberOfBits = 1;
+                    maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 }
                 else
                 {
-                    _bitNumber = value;
-                    maxSize = (int)Math.Pow(2, bitNumber);
+                    _allowedNumberOfBits = value;
+                    maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 }
             }
         }
@@ -70,39 +68,19 @@ namespace binary_calculator.Wrappers.Integers
         #region "Public Methods"
         public DecWrapper(int bitNumber = 8, string input = "")
         {
-            this.bitNumber = bitNumber;
+            this.allowedNumberOfBits = bitNumber;
             storedInput = input;
         }
 
         
 
-        public void ClearInput()
-        {
-            storedInput = "0";
-        }
-
-        public void AddChar(char digit)
-        {
-            string storeConcat = string.Concat(storedInput, digit.ToString());
-            storedInput = storeConcat;
-        }
-
-        public void deleteChar()
-        {           
-                string temp = storedInput.Substring(0, storedInput.Length - 1);
-                storedInput = temp; 
-        }
-
-        public override string ToString()
-        {
-            return storedInput;
-        }
+        
         #endregion
 
         #region "Private Methods"
         private void copyInput(DecWrapper input)
         {
-            this.bitNumber = input.bitNumber;
+            this.allowedNumberOfBits = input.allowedNumberOfBits;
             this.storedInput = input.storedInput;
         }
 

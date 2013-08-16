@@ -28,18 +28,25 @@ namespace binary_calculator.Converters.Integers
         public BinWrapper FromDecIntPos(DecWrapper input)
         {
             long toBeConverted = input.storedNumber;
-            int bitNumber = input.bitNumber;
+            int bitNumber = input.allowedNumberOfBits;
             string result = Convert(toBeConverted, bitNumber);
-            BinWrapper output = new BinWrapper(NumberBaseChoice.BASE_TWO, bitNumber, result);
+            BinWrapper output = new BinWrapper( bitNumber, result);
 
             return output;
         }
 
-        //public BinWrapper FromPowerOfTwoIntPos(PowerOfTwoWrapper input)
-        //{
+        public BinWrapper FromPowerOfTwoIntPos(PowerOfTwoWrapperNonBin input)
+        {
+            int bitNumber = input.allowedNumberOfBits;
+            NumberBaseChoice baseChoice = input.baseChoice;
+            string storedInput = input.storedInput;
+            string result = Convert(storedInput, baseChoice);
 
-        //}
+            BinWrapper output = new BinWrapper(bitNumber, result);
 
+            return output;
+
+        }
 
         #endregion
 
