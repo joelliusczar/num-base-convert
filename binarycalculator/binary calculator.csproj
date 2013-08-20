@@ -51,6 +51,10 @@
     <Compile Include="dictionaries\DictionaryForBinary.cs" />
     <Compile Include="dictionaries\DictionaryForDecimals.cs" />
     <Compile Include="dictionaries\Filters.cs" />
+    <Compile Include="Enums\InheritableEnum.cs" />
+    <Compile Include="Enums\NumberBases.cs" />
+    <Compile Include="Enums\NumberBasesAny.cs" />
+    <Compile Include="Enums\NumberBasesPowerOfTwo.cs" />
     <Compile Include="Wrappers\Integers\DecWrapper.cs" />
     <Compile Include="Wrappers\GenericWrapper.cs" />
     <Compile Include="Wrappers\Integers\BinWrapper.cs" />
@@ -60,7 +64,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NumberBaseGlobalEnums.cs" />
     <Compile Include="Converters\Integers\ConverterToDec.cs" />
     <Compile Include="Converters\Integers\ConverterToBin.cs" />
     <Compile Include="Converters\GenericConverter.cs" />
@@ -73,6 +76,7 @@
     <Compile Include="Wrappers\Integers\GenericIntegerWrapper.cs" />
     <Compile Include="Wrappers\Integers\PowerOfTwoWrapperNonBin.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedInteger.cs" />
+    <Compile Include="Wrappers\UnfixedSize\UnfixedIntegerPowerOfTwo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

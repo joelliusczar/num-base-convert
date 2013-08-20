@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Enums;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
     public class UnfixedInteger: GenericWrapper 
     {
-        private NumberBaseChoice _choice;
+        
+        #region "constants for whole class"
+
+        #endregion
+
+        #region "Properties"
+        private NumberBases _choice;
 
         public override string storedInput
         {
@@ -22,7 +29,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
                     base.storedInput = "0";
                 }
 
-                bool inputAllowed = InputAllCharsLegal(value, baseChoice);
+                bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice);
                 if (inputAllowed)
                 {
                     if (value.Length == 0) base.storedInput = "0";
@@ -31,19 +38,29 @@ namespace binary_calculator.Wrappers.UnfixedSize
             }
         }
 
-        public NumberBaseChoice baseChoice
+        public virtual NumberBases baseChoice
         {
             get { return _choice; }
             set
             {
                 _choice = value;
+                storedInput = "0"; //resets the number so that there are no illegal characters according to the new number base.
             }
         }
+        #endregion
 
-        public UnfixedInteger(NumberBaseChoice type, string input = "")
+        #region "Public Methods"
+        public UnfixedInteger(NumberBases type, string input = "")
         {
             this.baseChoice = type;
             this.storedInput = input;
         }
+        #endregion
+
+        #region "Private Methods"
+        
+
+        #endregion
+
     }
 }

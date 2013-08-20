@@ -41,17 +41,17 @@ namespace binary_calculator.Wrappers.Integers
 
         public override int allowedNumberOfBits
         {
-            get { return _allowedNumberOfBits; }
+            get { return base.allowedNumberOfBits; }
             set
             {
                 if (value < 0)
                 {
-                    _allowedNumberOfBits = 1;
+                    base.allowedNumberOfBits = 1;
                     maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 }
                 else
                 {
-                    _allowedNumberOfBits = value;
+                    base.allowedNumberOfBits = value;
                     maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 }
             }

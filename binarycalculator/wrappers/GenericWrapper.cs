@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Enums;
 
 namespace binary_calculator.Wrappers
 {
@@ -64,17 +65,28 @@ namespace binary_calculator.Wrappers
             #endregion
 
             #region "Private Methods"
-            protected bool InputAllCharsLegal(string input, NumberBaseChoice baseChoice)
+            private bool CheckIfContains(string input, string illegalChars)
+            {
+                bool result = false;
+
+                result = input.All(c => !illegalChars.Contains(c)); //this can be fixed to make it quicker
+
+                return result;
+            }
+
+            public bool AreAllCharsOfInputLegal(string input, NumberBases baseChoice)
             {
                 bool result = true;
 
 
                 string illegalChars = filter.GetIllegalChars(baseChoice);
 
-                result = input.All(c => !illegalChars.Contains(c)); //this can be fixed to make it quicker
+                result = CheckIfContains(input, illegalChars);
 
                 return result;
-            }      
+            }
+
+            
             #endregion
 
             

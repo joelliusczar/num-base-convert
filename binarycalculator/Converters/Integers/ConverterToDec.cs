@@ -20,12 +20,12 @@ namespace binary_calculator.Converters.Integers
 
         #region "Public Methods"
 
-        public DecWrapper ToDecFromBinIntPos(BinWrapper input)
+        public DecWrapper Convert(BinWrapper input)
         {
             int size = input.allowedNumberOfBits;
             int convertFromBase = 2;
             string toBeConverted = input.storedInput;
-            long result = Convert(toBeConverted,convertFromBase);
+            long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
             DecWrapper output = new DecWrapper(size, result.ToString());
 
             return output;
@@ -34,7 +34,7 @@ namespace binary_calculator.Converters.Integers
         #endregion
 
         #region "Private Methods"
-        private long Convert(string input,int convertFromBase)
+        private long ToDecFromBinIntPos(string input,int convertFromBase)
         {
             long result = 0;
 

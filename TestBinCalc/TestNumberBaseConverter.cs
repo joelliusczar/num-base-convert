@@ -12,82 +12,13 @@ namespace TestBinCalc
     {
         static void Main(string[] args)
         {
-            TestInputBinary();
+            
             Console.ReadKey();
         }
 
 
 
-        private static void TestInputBinary()
-        {
-            NumberBaseChoice choice = NumberBaseChoice.BASE_TWO;
-            
-            string testInput = "";
-            string expectedResult = "0";
-            BinWrapper input = new BinWrapper( 8, testInput);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nTest Input is: {4}\n Expected result is: {1}\n Result is: {2}\n" +
-            "testInput length is: {5}\ninput length is {6} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, testInput, testInput.Length, input.storedInput.Length);
-
-            testInput = "00000000";
-            expectedResult = "00000000";
-            input = new BinWrapper( 8, testInput);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nTest Input is: {4}\n Expected result is: {1}\n Result is: {2}\n" +
-            "testInput length is: {5}\ninput length is {6} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, testInput, testInput.Length, input.storedInput.Length);
-
-            testInput = "11111111";
-            expectedResult = "11111111";
-            input = new BinWrapper( 8, testInput);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nTest Input is: {4}\n Expected result is: {1}\n Result is: {2}\n" +
-            "testInput length is: {5}\ninput length is {6} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, testInput, testInput.Length, input.storedInput.Length);
-
-            testInput = "10101010";
-            expectedResult = "10101010";
-            input = new BinWrapper( 8, testInput);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nTest Input is: {4}\n Expected result is: {1}\n Result is: {2}\n" +
-            "testInput length is: {5}\ninput length is {6} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, testInput, testInput.Length, input.storedInput.Length);
-
-            testInput = "23";
-            expectedResult = "0";
-            input = new BinWrapper( 8, testInput);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nTest Input is: {4}\n Expected result is: {1}\n Result is: {2}\n" +
-            "testInput length is: {5}\ninput length is {6} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits,testInput,testInput.Length,input.storedInput.Length);
-
-            testInput = "010101010";
-            expectedResult = "0";
-            input = new BinWrapper( 8, testInput);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nTest Input is: {4}\n Expected result is: {1}\n Result is: {2}\n" +
-            "testInput length is: {5}\ninput length is {6} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, testInput, testInput.Length, input.storedInput.Length);
-
-            testInput = "1111";
-            input = new BinWrapper( 8, testInput);
-            
-
-            expectedResult = "1111";
-            char charAdded = 'a';
-            input.AddChar(charAdded);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nChar added is: {5}\n Expected result is: {1}\n Result is: {2}\n" +
-            "input length is {4} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, input.storedInput.Length,charAdded);
-
-            expectedResult = "11110";
-            charAdded = '0';
-            input.AddChar(charAdded);
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\nChar added is: {5}\n Expected result is: {1}\n Result is: {2}\n" +
-            "input length is {4} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, input.storedInput.Length, charAdded);
-
-            expectedResult = "1111";
-            input.deleteChar();
-            Console.Write("Number base is: {0}\nAllowed max length is: {3}\n Expected result is: {1}\n Result is: {2}\n" +
-            "input length is {4} \n\n\n",
-                choice, expectedResult, input.storedInput, input.allowedNumberOfBits, input.storedInput.Length);
-        }
+     
 
         
 

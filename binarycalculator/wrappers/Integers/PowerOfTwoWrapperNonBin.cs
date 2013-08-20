@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Enums;
 
 namespace binary_calculator.Wrappers.Integers
 {
@@ -12,9 +13,9 @@ namespace binary_calculator.Wrappers.Integers
             #endregion
 
             #region "Properties"
-            private NumberBaseChoice _choice;
+            private NumberBasesPowerOfTwo _choice;
 
-            public NumberBaseChoice baseChoice
+            public NumberBasesPowerOfTwo baseChoice
             {
                 get { return _choice; }
                 set
@@ -36,7 +37,7 @@ namespace binary_calculator.Wrappers.Integers
                         base.storedInput = "0";
                     }
 
-                    bool inputAllowed = InputAllCharsLegal(value, baseChoice);
+                    bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice);
                     if (inputAllowed)
                     {
                         binary_calculator.Converters.Integers.ConverterToBin bin = new Converters.Integers.ConverterToBin();

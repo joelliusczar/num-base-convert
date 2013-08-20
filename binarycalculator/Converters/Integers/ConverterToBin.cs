@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.Wrappers.Integers;
-
+using binary_calculator.Enums;
 
 namespace binary_calculator.Converters.Integers
 {
@@ -25,22 +25,22 @@ namespace binary_calculator.Converters.Integers
         {
         }
 
-        public BinWrapper FromDecIntPos(DecWrapper input)
+        public BinWrapper Convert(DecWrapper input)
         {
             long toBeConverted = input.storedNumber;
             int bitNumber = input.allowedNumberOfBits;
-            string result = Convert(toBeConverted, bitNumber);
+            string result = FromDecIntPos(toBeConverted, bitNumber);
             BinWrapper output = new BinWrapper( bitNumber, result);
 
             return output;
         }
 
-        public BinWrapper FromPowerOfTwoIntPos(PowerOfTwoWrapperNonBin input)
+        public BinWrapper Convert(PowerOfTwoWrapperNonBin input)
         {
             int bitNumber = input.allowedNumberOfBits;
-            NumberBaseChoice baseChoice = input.baseChoice;
+            NumberBasesPowerOfTwo baseChoice = input.baseChoice;
             string storedInput = input.storedInput;
-            string result = Convert(storedInput, baseChoice);
+            string result = FromPowerOfTwoIntPos(storedInput, baseChoice);
 
             BinWrapper output = new BinWrapper(bitNumber, result);
 
@@ -51,7 +51,7 @@ namespace binary_calculator.Converters.Integers
         #endregion
 
         #region "Private Methods"
-        private string Convert(long input, int bitNumber = 8)
+        private string FromDecIntPos(long input, int bitNumber = 8)
         {
             string result = "";
             Stack<string> resultAsStack = new Stack<string>();
@@ -66,10 +66,10 @@ namespace binary_calculator.Converters.Integers
             return result;
         }
 
-        private string Convert(string input,NumberBaseChoice choice)
+        private string FromPowerOfTwoIntPos(string input,NumberBases choice)
         {
             string result = "";
-            int numBase = (int)choice;
+            int numBase = choice.toInt;
             int exponent = 0;
             int dictionaryValueSize = 4;
 

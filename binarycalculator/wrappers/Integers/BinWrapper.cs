@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Enums;
+
 
 
 namespace binary_calculator.Wrappers.Integers
@@ -26,7 +28,7 @@ namespace binary_calculator.Wrappers.Integers
                     _storedInput = "0";
                 }
 
-                bool inputAllowed = InputAllCharsLegal(value,NumberBaseChoice.BASE_TWO);
+                bool inputAllowed = AreAllCharsOfInputLegal(value,NumberBasesPowerOfTwo.BASE_TWO);
                 if (inputAllowed)
                 {
                     if (value.Length <= allowedNumberOfBits) _storedInput = value;
@@ -52,7 +54,7 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Private Methods"
-          
+
 
         #endregion
     }
