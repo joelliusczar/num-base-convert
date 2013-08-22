@@ -8,9 +8,41 @@ namespace binary_calculator.Wrappers.UnfixedSize
 {
     class UnfixedIntegerPowerOfTwo: GenericWrapper
     {
-        UnfixedIntegerPowerOfTwo(NumberBases type, string input = "")
-        {
+        private NumberBases _type;
 
+        public NumberBases type
+        {
+            get { return _type; }
+            private set 
+            {
+
+                _type = value;
+                storedInput = "0";
+            }
+        }
+
+
+        public override string storedInput
+        {
+            get
+            {
+                return base.storedInput;
+            }
+            protected set
+            {
+                base.storedInput = value;
+            }
+        }
+
+        public UnfixedIntegerPowerOfTwo(NumberBasesPowerOfTwo type, string input = "")
+        {
+            this.type = type.type;
+            storedInput = input;
+        }
+
+        public void SetNumberBase(NumberBasesPowerOfTwo type)
+        {
+            this.type = type.type;
         }
 
     }

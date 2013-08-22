@@ -23,11 +23,11 @@ namespace binary_calculator.dictionaries
         {
             #region "dictionary"
             illegalCharLists = new Dictionary<NumberBases, string>();
-            illegalCharLists.Add(NumberBasesPowerOfTwo.BASE_TWO,
+            illegalCharLists.Add(NumberBases.BASE_TWO,
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-.`!@#$%^&*()<>?:{},/;'[]\\|\"23456789");
-            illegalCharLists.Add(NumberBasesPowerOfTwo.BASE_SIXTEEN,
+            illegalCharLists.Add(NumberBases.BASE_SIXTEEN,
                 "GHIJKLMNOPQRSTUVWXYZghijklmnopqrstuvwxyz-.`!@#$%^&*()<>?:{},/;'[]\\|\"");
-            illegalCharLists.Add(NumberBasesPowerOfTwo.BASE_EIGHT,
+            illegalCharLists.Add(NumberBases.BASE_EIGHT,
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-.`!@#$%^&*()<>?:{},/;'[]\\|\"89");
             #endregion
         }

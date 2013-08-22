@@ -28,7 +28,7 @@ namespace binary_calculator.Wrappers.Integers
                     _storedInput = "0";
                 }
 
-                bool inputAllowed = AreAllCharsOfInputLegal(value,NumberBasesPowerOfTwo.BASE_TWO);
+                bool inputAllowed = AreAllCharsOfInputLegal(value,NumberBases.BASE_TWO);
                 if (inputAllowed)
                 {
                     if (value.Length <= allowedNumberOfBits) _storedInput = value;

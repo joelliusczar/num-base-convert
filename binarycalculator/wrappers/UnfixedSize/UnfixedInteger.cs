@@ -38,7 +38,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
             }
         }
 
-        public virtual NumberBases baseChoice
+        public NumberBases baseChoice
         {
             get { return _choice; }
             set

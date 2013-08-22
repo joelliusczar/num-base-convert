@@ -51,9 +51,7 @@
     <Compile Include="dictionaries\DictionaryForBinary.cs" />
     <Compile Include="dictionaries\DictionaryForDecimals.cs" />
     <Compile Include="dictionaries\Filters.cs" />
-    <Compile Include="Enums\InheritableEnum.cs" />
     <Compile Include="Enums\NumberBases.cs" />
-    <Compile Include="Enums\NumberBasesAny.cs" />
     <Compile Include="Enums\NumberBasesPowerOfTwo.cs" />
     <Compile Include="Wrappers\Integers\DecWrapper.cs" />
     <Compile Include="Wrappers\GenericWrapper.cs" />

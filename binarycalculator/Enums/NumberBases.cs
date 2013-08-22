@@ -5,34 +5,5 @@ using System.Text;
 
 namespace binary_calculator.Enums
 {
-    public abstract class NumberBases: InheritableEnum
-    {
-        public static readonly NumberBases BASE_TWO = new Two();
-        public static readonly NumberBases BASE_EIGHT = new Eight();
-        public static readonly NumberBases BASE_SIXTEEN = new Sixteen();
-
-        private class Two : NumberBases
-        {
-            public Two()
-            {
-                toInt = 2;
-            }
-        }
-
-        private class Eight : NumberBases
-        {
-            public Eight()
-            {
-                toInt = 8;
-            }
-        }
-
-        private class Sixteen : NumberBases
-        {
-            public Sixteen()
-            {
-                toInt = 16;
-            }
-        }
-    }
+    public enum NumberBases {BASE_TWO = 2, BASE_EIGHT = 8, BASE_SIXTEEN= 16 }
 }

@@ -13,14 +13,15 @@ namespace binary_calculator.Wrappers.Integers
             #endregion
 
             #region "Properties"
-            private NumberBasesPowerOfTwo _choice;
+            private NumberBases _choice;
 
-            public NumberBasesPowerOfTwo baseChoice
+            public NumberBases baseChoice
             {
                 get { return _choice; }
                 set
                 {
                     _choice = value;
+                    storedInput = "0"; //resets the number so that there are no illegal characters according to the new number base.
                 }
             }
 

@@ -38,7 +38,7 @@ namespace binary_calculator.Converters.Integers
         public BinWrapper Convert(PowerOfTwoWrapperNonBin input)
         {
             int bitNumber = input.allowedNumberOfBits;
-            NumberBasesPowerOfTwo baseChoice = input.baseChoice;
+            NumberBases baseChoice = input.baseChoice;
             string storedInput = input.storedInput;
             string result = FromPowerOfTwoIntPos(storedInput, baseChoice);
 
@@ -69,7 +69,7 @@ namespace binary_calculator.Converters.Integers
         private string FromPowerOfTwoIntPos(string input,NumberBases choice)
         {
             string result = "";
-            int numBase = choice.toInt;
+            int numBase = (int)choice;
             int exponent = 0;
             int dictionaryValueSize = 4;
 
