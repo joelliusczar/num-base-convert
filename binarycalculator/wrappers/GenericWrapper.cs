@@ -74,7 +74,7 @@ namespace binary_calculator.Wrappers
                 return result;
             }
 
-            public bool AreAllCharsOfInputLegal(string input, NumberBases baseChoice)
+            protected bool AreAllCharsOfInputLegal(string input, NumberBases baseChoice)
             {
                 bool result = true;
 

@@ -6,17 +6,17 @@ using binary_calculator.Enums;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    class UnfixedIntegerPowerOfTwo: GenericWrapper
+    public class UnfixedIntegerPowerOfTwo: GenericWrapper
     {
-        private NumberBases _type;
+        private NumberBasesPowerOfTwo _baseChoice;
 
-        public NumberBases type
+        public NumberBasesPowerOfTwo baseChoice
         {
-            get { return _type; }
+            get { return _baseChoice; }
             private set 
             {
 
-                _type = value;
+                _baseChoice = value;
                 storedInput = "0";
             }
         }
@@ -30,19 +30,29 @@ namespace binary_calculator.Wrappers.UnfixedSize
             }
             protected set
             {
-                base.storedInput = value;
+                if (storedInput == null || storedInput.Length == 0)
+                    {
+                        base.storedInput = "0";
+                    }
+
+                bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice.numberBase);
+                if (inputAllowed)
+                {
+                    base.storedInput = value;
+                    if (value.Length == 0) base.storedInput = "0";
+                }
             }
         }
 
         public UnfixedIntegerPowerOfTwo(NumberBasesPowerOfTwo type, string input = "")
         {
-            this.type = type.type;
+            this.baseChoice = type;
             storedInput = input;
         }
 
-        public void SetNumberBase(NumberBasesPowerOfTwo type)
+        public NumberBases GetNumberBase()
         {
-            this.type = type.type;
+            return this.baseChoice.numberBase;
         }
 
     }

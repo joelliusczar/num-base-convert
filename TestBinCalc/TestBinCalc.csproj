@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestInputs\PowTwoNumBaseCheck.cs" />
     <Compile Include="TestNumberBaseConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestObjects\PowerOfTwoTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\binarycalculator\binary calculator.csproj">

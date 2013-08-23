@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using binary_calculator.Wrappers.Integers;
 using binary_calculator.Enums;
+using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Converters.Integers
 {
@@ -38,13 +39,25 @@ namespace binary_calculator.Converters.Integers
         public BinWrapper Convert(PowerOfTwoWrapperNonBin input)
         {
             int bitNumber = input.allowedNumberOfBits;
-            NumberBases baseChoice = input.baseChoice;
+            NumberBases baseChoice = input.GetNumberBase();
             string storedInput = input.storedInput;
             string result = FromPowerOfTwoIntPos(storedInput, baseChoice);
 
             BinWrapper output = new BinWrapper(bitNumber, result);
 
             return output;
+
+        }
+
+        public UnfixedBin Convert(UnfixedIntegerPowerOfTwo input)
+        {
+            string toBeConverted = input.storedInput;
+            NumberBases numberBase = input.GetNumberBase();
+
+            string result = FromPowerOfTwoIntPos(toBeConverted, numberBase);
+
+            UnfixedBin bin = new UnfixedBin(result);
+            return bin;
 
         }
 

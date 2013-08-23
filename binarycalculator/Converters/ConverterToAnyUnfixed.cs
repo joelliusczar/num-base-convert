@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.Wrappers.UnfixedSize;
+using binary_calculator.Enums;
+using binary_calculator.Converters.Integers;
 
 namespace binary_calculator.Converters
 {
@@ -17,10 +19,7 @@ namespace binary_calculator.Converters
         #endregion
 
         #region "Public Methods"
-        //public UnfixedInteger ConvertToBin(UnfixedInteger AnyBase)
-        //{
-
-        //}
+        
         #endregion
 
         #region "Private Methods"

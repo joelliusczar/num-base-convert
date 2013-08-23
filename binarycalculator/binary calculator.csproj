@@ -73,6 +73,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wrappers\Integers\GenericIntegerWrapper.cs" />
     <Compile Include="Wrappers\Integers\PowerOfTwoWrapperNonBin.cs" />
+    <Compile Include="Wrappers\UnfixedSize\UnfixedBin.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedIntegerPowerOfTwo.cs" />
     <EmbeddedResource Include="MainForm.resx">

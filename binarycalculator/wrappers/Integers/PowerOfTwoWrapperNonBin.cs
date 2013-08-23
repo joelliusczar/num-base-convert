@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.Enums;
+using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Wrappers.Integers
 {
@@ -13,12 +14,12 @@ namespace binary_calculator.Wrappers.Integers
             #endregion
 
             #region "Properties"
-            private NumberBases _choice;
+            private NumberBasesPowerOfTwo _choice;
 
-            public NumberBases baseChoice
+            public NumberBasesPowerOfTwo baseChoice
             {
                 get { return _choice; }
-                set
+                private set
                 {
                     _choice = value;
                     storedInput = "0"; //resets the number so that there are no illegal characters according to the new number base.
@@ -38,27 +39,39 @@ namespace binary_calculator.Wrappers.Integers
                         base.storedInput = "0";
                     }
 
-                    bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice);
+                    bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice.numberBase);
                     if (inputAllowed)
                     {
-                        binary_calculator.Converters.Integers.ConverterToBin bin = new Converters.Integers.ConverterToBin();
+                        UnfixedIntegerPowerOfTwo powerOfTwo = new UnfixedIntegerPowerOfTwo(baseChoice, value);
 
+                        Converters.Integers.ConverterToBin converter = new Converters.Integers.ConverterToBin();
+                        UnfixedBin bin =  converter.Convert(powerOfTwo);
+                        int binLength = bin.storedInput.Length;
 
-                        //need to do work here!!!!!!!!!!!!!!!!!!!
-                        //BinWrapper binWrapper = bin.FromPowerOfTwoIntPos(
-                        
-                        if(value.Length == 0) base.storedInput = "0";
+                        if (binLength <= this.allowedNumberOfBits) base.storedInput = value;
+
+                        if (value.Length == 0) base.storedInput = "0";
                     }
                 }
             }
             #endregion
 
             #region "Public Methods"
+            public PowerOfTwoWrapperNonBin(NumberBasesPowerOfTwo type, string input = "", int allowedBitNumber = 8)
+            {
+                this.allowedNumberOfBits = allowedBitNumber;
+                this.baseChoice = type;
+                this.storedInput = input;
+            }
 
+            public NumberBases GetNumberBase()
+            {
+                return this.baseChoice.numberBase;
+            }
             #endregion
 
             #region "Private Methods"
-
+            
 
             #endregion
     }

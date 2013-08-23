@@ -11,12 +11,12 @@ namespace binary_calculator.Enums
     public class NumberBasesPowerOfTwo 
     {
         public enum BaseChoice { BASE_TWO = 2, BASE_EIGHT = 8, BASE_SIXTEEN = 16 }
-        private NumberBases _type;
+        private NumberBases _numberBase;
 
-        public NumberBases type
+        public NumberBases numberBase
         {
-            get { return _type; }
-            private set { _type = value; }
+            get { return _numberBase; }
+            private set { _numberBase = value; }
         }
 
         public NumberBasesPowerOfTwo(BaseChoice choice)
@@ -29,13 +29,13 @@ namespace binary_calculator.Enums
             switch (choice)
             {
                 case BaseChoice.BASE_TWO:
-                    type = NumberBases.BASE_TWO;
+                    numberBase = NumberBases.BASE_TWO;
                     break;
                 case BaseChoice.BASE_EIGHT:
-                    type = NumberBases.BASE_EIGHT;
+                    numberBase = NumberBases.BASE_EIGHT;
                     break;
                 case BaseChoice.BASE_SIXTEEN:
-                    type = NumberBases.BASE_SIXTEEN;
+                    numberBase = NumberBases.BASE_SIXTEEN;
                     break;
                 
             }
