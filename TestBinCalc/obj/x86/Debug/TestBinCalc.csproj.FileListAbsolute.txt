@@ -14,3 +14,8 @@ C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\TestBinCalc
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\TestBinCalc\bin\Debug\binary calculator.exe
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\TestBinCalc\bin\Debug\binary calculator.pdb
 C:\Users\joel.pridgen\MyCode\Junk Projects\bin-calc\num-base-convert\TestBinCalc\obj\x86\Debug\TestBinCalc.csprojResolveAssemblyReference.cache
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\obj\x86\Debug\TestBinCalc.csprojResolveAssemblyReference.cache
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\TestBinCalc.exe
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\TestBinCalc.pdb
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\binary calculator.exe
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\binary calculator.pdb

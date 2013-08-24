@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using binary_calculator.Wrappers.Integers;
 
 namespace binary_calculator.Converters.Integers
@@ -20,13 +17,13 @@ namespace binary_calculator.Converters.Integers
 
         #region "Public Methods"
 
-        public DecWrapper Convert(BinWrapper input)
+        public DecInteger Convert(BinInteger input)
         {
             int size = input.allowedNumberOfBits;
             int convertFromBase = 2;
             string toBeConverted = input.storedInput;
             long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
-            DecWrapper output = new DecWrapper(size, result.ToString());
+            DecInteger output = new DecInteger(size, result.ToString());
 
             return output;
         }

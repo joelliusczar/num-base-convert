@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using binary_calculator.Enums;
+﻿using binary_calculator.Enums;
 
 
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class BinWrapper : GenericIntegerWrapper
+    public class BinInteger : GenericIntegerWrapper
     {
         
         #region "constants for whole class"
@@ -43,7 +39,7 @@ namespace binary_calculator.Wrappers.Integers
 
         #region "Public Methods"
 
-        public BinWrapper(int size = 8, string input = "")
+        public BinInteger(int size = 8, string input = "")
         {
             
             allowedNumberOfBits = size;

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using binary_calculator.Wrappers.Integers;
 using binary_calculator.Enums;
 using binary_calculator.Wrappers.UnfixedSize;
@@ -26,37 +24,37 @@ namespace binary_calculator.Converters.Integers
         {
         }
 
-        public BinWrapper Convert(DecWrapper input)
+        public BinInteger Convert(DecInteger input)
         {
             long toBeConverted = input.storedNumber;
             int bitNumber = input.allowedNumberOfBits;
             string result = FromDecIntPos(toBeConverted, bitNumber);
-            BinWrapper output = new BinWrapper( bitNumber, result);
+            BinInteger output = new BinInteger( bitNumber, result);
 
             return output;
         }
 
-        public BinWrapper Convert(PowerOfTwoWrapperNonBin input)
+        public BinInteger Convert(PowOfTwoInteger input)
         {
             int bitNumber = input.allowedNumberOfBits;
             NumberBases baseChoice = input.GetNumberBase();
             string storedInput = input.storedInput;
             string result = FromPowerOfTwoIntPos(storedInput, baseChoice);
 
-            BinWrapper output = new BinWrapper(bitNumber, result);
+            BinInteger output = new BinInteger(bitNumber, result);
 
             return output;
 
         }
 
-        public UnfixedBin Convert(UnfixedIntegerPowerOfTwo input)
+        public UnfixedBinInteger Convert(UnfixedPowOfTwoInteger input)
         {
             string toBeConverted = input.storedInput;
             NumberBases numberBase = input.GetNumberBase();
 
             string result = FromPowerOfTwoIntPos(toBeConverted, numberBase);
 
-            UnfixedBin bin = new UnfixedBin(result);
+            UnfixedBinInteger bin = new UnfixedBinInteger(result);
             return bin;
 
         }

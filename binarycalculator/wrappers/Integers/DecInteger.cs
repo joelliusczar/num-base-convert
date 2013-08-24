@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class DecWrapper : GenericIntegerWrapper
+    public class DecInteger : GenericIntegerWrapper
     {
 
         #region "constants for whole class"
@@ -66,7 +63,7 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Public Methods"
-        public DecWrapper(int bitNumber = 8, string input = "")
+        public DecInteger(int bitNumber = 8, string input = "")
         {
             this.allowedNumberOfBits = bitNumber;
             storedInput = input;
@@ -78,7 +75,7 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Private Methods"
-        private void copyInput(DecWrapper input)
+        private void copyInput(DecInteger input)
         {
             this.allowedNumberOfBits = input.allowedNumberOfBits;
             this.storedInput = input.storedInput;

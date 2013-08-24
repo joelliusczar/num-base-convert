@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using binary_calculator.Enums;
+﻿using binary_calculator.Enums;
 using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class PowerOfTwoWrapperNonBin : GenericIntegerWrapper
+    public class PowOfTwoInteger : GenericIntegerWrapper
     {
             #region "constants for whole class"
 
             #endregion
 
             #region "Properties"
-            private NumberBasesPowerOfTwo _choice;
+            private PowOfTwoBases _choice;
 
-            public NumberBasesPowerOfTwo baseChoice
+            public PowOfTwoBases baseChoice
             {
                 get { return _choice; }
                 private set
@@ -42,10 +38,10 @@ namespace binary_calculator.Wrappers.Integers
                     bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice.numberBase);
                     if (inputAllowed)
                     {
-                        UnfixedIntegerPowerOfTwo powerOfTwo = new UnfixedIntegerPowerOfTwo(baseChoice, value);
+                        UnfixedPowOfTwoInteger powerOfTwo = new UnfixedPowOfTwoInteger(baseChoice, value);
 
                         Converters.Integers.ConverterToBin converter = new Converters.Integers.ConverterToBin();
-                        UnfixedBin bin =  converter.Convert(powerOfTwo);
+                        UnfixedBinInteger bin =  converter.Convert(powerOfTwo);
                         int binLength = bin.storedInput.Length;
 
                         if (binLength <= this.allowedNumberOfBits) base.storedInput = value;
@@ -57,7 +53,7 @@ namespace binary_calculator.Wrappers.Integers
             #endregion
 
             #region "Public Methods"
-            public PowerOfTwoWrapperNonBin(NumberBasesPowerOfTwo type, string input = "", int allowedBitNumber = 8)
+            public PowOfTwoInteger(PowOfTwoBases type, string input = "", int allowedBitNumber = 8)
             {
                 this.allowedNumberOfBits = allowedBitNumber;
                 this.baseChoice = type;

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using binary_calculator.Enums;
+﻿using binary_calculator.Enums;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedIntegerPowerOfTwo: GenericWrapper
+    public class UnfixedPowOfTwoInteger: GenericWrapper
     {
-        private NumberBasesPowerOfTwo _baseChoice;
+        private PowOfTwoBases _baseChoice;
 
-        public NumberBasesPowerOfTwo baseChoice
+        public PowOfTwoBases baseChoice
         {
             get { return _baseChoice; }
             private set 
@@ -44,7 +40,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
             }
         }
 
-        public UnfixedIntegerPowerOfTwo(NumberBasesPowerOfTwo type, string input = "")
+        public UnfixedPowOfTwoInteger(PowOfTwoBases type, string input = "")
         {
             this.baseChoice = type;
             storedInput = input;
