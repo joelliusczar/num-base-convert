@@ -43,15 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestInputs\PowTwoNumBaseCheck.cs" />
     <Compile Include="TestNumberBaseConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestObjects\Bin_TEST.cs" />
-    <Compile Include="TestObjects\Dec_TEST.cs" />
-    <Compile Include="TestObjects\PowerOfTwo_TEST.cs" />
-    <Compile Include="TestObjects\UnfixedAny_TEST.cs" />
-    <Compile Include="TestObjects\UnfixedBin_TEST.cs" />
-    <Compile Include="TestObjects\UnfixedPowOfTwo_TEST.cs" />
+    <Compile Include="TestObjects\BinInteger_TEST.cs" />
+    <Compile Include="TestObjects\DecInteger_TEST.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\binarycalculator\binary calculator.csproj">

@@ -32,7 +32,6 @@ namespace binary_calculator.Wrappers
 
                     return _filter;
                 }
-                set { _filter = value; }
             }
         
             #endregion
