@@ -21,7 +21,7 @@ namespace binary_calculator.Wrappers.Integers
 
         public override string storedInput
         {
-            get { return _storedInput; }
+            get { return base.storedInput; }
             protected set 
             {
                 long temp;
@@ -29,7 +29,7 @@ namespace binary_calculator.Wrappers.Integers
                 bool validLong = (long.TryParse(value, out temp));
                 if (TestAgainstSize(temp)&&validLong)
                 {
-                    _storedInput = value;
+                    base.storedInput = value;
                     storedNumber = temp;
                 }
                 
@@ -45,12 +45,16 @@ namespace binary_calculator.Wrappers.Integers
                 {
                     base.allowedNumberOfBits = 1;
                     maxSize = (int)Math.Pow(2, allowedNumberOfBits);
+
                 }
                 else
                 {
                     base.allowedNumberOfBits = value;
                     maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 }
+
+                if (storedNumber > maxSize) storedInput = "0";
+                    
             }
         }
 
@@ -86,7 +90,7 @@ namespace binary_calculator.Wrappers.Integers
             return (value < maxSize)&&(value >=0);
         }
 
-        
+       
         #endregion
         
     }

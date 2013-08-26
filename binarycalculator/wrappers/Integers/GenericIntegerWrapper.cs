@@ -1,7 +1,7 @@
 ﻿
 namespace binary_calculator.Wrappers.Integers
 {
-    public class GenericIntegerWrapper:GenericWrapper  
+    public abstract class GenericIntegerWrapper:GenericWrapper  
     {
         
 
@@ -15,7 +15,10 @@ namespace binary_calculator.Wrappers.Integers
         public virtual int allowedNumberOfBits
         {
             get { return _allowedNumberOfBits; }
-            set { _allowedNumberOfBits = value; }
+            set 
+            {
+                _allowedNumberOfBits = value;               
+            }
         }
         #endregion
 
@@ -24,7 +27,7 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Private Methods"
-        
+
 
         #endregion
     }

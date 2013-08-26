@@ -8,7 +8,7 @@ namespace binary_calculator.Wrappers.Integers
     {
         
         #region "constants for whole class"
-
+        protected const char FILL_STRING_WITH_THIS_CHAR__ZERO = '0';
         #endregion
 
         #region "Properties"
@@ -16,21 +16,35 @@ namespace binary_calculator.Wrappers.Integers
 
         public override string storedInput
         {
-            get { return _storedInput; }
+            get { return base.storedInput; }
             protected set 
             {
-                if (storedInput == null || storedInput.Length == 0)
-                {
-                    _storedInput = "0";
-                }
+                
 
                 bool inputAllowed = AreAllCharsOfInputLegal(value,NumberBases.BASE_TWO);
                 if (inputAllowed)
                 {
-                    if (value.Length <= allowedNumberOfBits) _storedInput = value;
-                    if (value.Length == 0) _storedInput = "0";
+                    if (value.Length <= allowedNumberOfBits) base.storedInput = value;
+                    if (value.Length == 0) base.storedInput = "0";
                 }
 
+                int numberOfFillerZerosNeeded = allowedNumberOfBits - base.storedInput.Length;
+                string filler = new string(FILL_STRING_WITH_THIS_CHAR__ZERO, numberOfFillerZerosNeeded);
+                base.storedInput = string.Concat(filler, base.storedInput);
+            }
+        }
+
+        public override int allowedNumberOfBits
+        {
+            get
+            {
+                return base.allowedNumberOfBits;
+            }
+            set
+            {
+                base.allowedNumberOfBits = value;
+                if (storedInput.Length > base.allowedNumberOfBits) storedInput = "";
+                    
             }
         }
 
@@ -50,7 +64,6 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Private Methods"
-
 
         #endregion
     }

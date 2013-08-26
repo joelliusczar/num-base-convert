@@ -30,24 +30,33 @@ namespace binary_calculator.Wrappers.Integers
                 }
                 protected set
                 {
-                    if (storedInput == null || storedInput.Length == 0)
-                    {
-                        base.storedInput = "0";
-                    }
 
                     bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice.numberBase);
                     if (inputAllowed)
                     {
-                        UnfixedPowOfTwoInteger powerOfTwo = new UnfixedPowOfTwoInteger(baseChoice, value);
-
-                        Converters.Integers.ConverterToBin converter = new Converters.Integers.ConverterToBin();
-                        UnfixedBinInteger bin =  converter.Convert(powerOfTwo);
-                        int binLength = bin.storedInput.Length;
+                        int binLength = GetBinaryLength(value);
 
                         if (binLength <= this.allowedNumberOfBits) base.storedInput = value;
 
                         if (value.Length == 0) base.storedInput = "0";
                     }
+                }
+            }
+
+            
+
+            public override int allowedNumberOfBits
+            {
+                get
+                {
+                    return base.allowedNumberOfBits;
+                }
+                set
+                {
+                    base.allowedNumberOfBits = value;
+                    int binLength = GetBinaryLength(storedInput);
+                    if (binLength > base.allowedNumberOfBits) storedInput = "0";
+                        
                 }
             }
             #endregion
@@ -67,8 +76,15 @@ namespace binary_calculator.Wrappers.Integers
             #endregion
 
             #region "Private Methods"
-            
+            private int GetBinaryLength(string input)
+            {
+                UnfixedPowOfTwoInteger powerOfTwo = new UnfixedPowOfTwoInteger(baseChoice, input);
 
+                Converters.Integers.ConverterToBin converter = new Converters.Integers.ConverterToBin();
+                UnfixedBinInteger bin = converter.Convert(powerOfTwo);
+                int binLength = bin.storedInput.Length;
+                return binLength;
+            }
             #endregion
     }
 }

@@ -86,13 +86,14 @@ namespace TestBinCalc.TestObjects
             this.storedInput = value;
             Console.Write("ReplaceStoredInput_TEST!\n" +
                 "input to be: {0}\n" +
+                "input length: {6}\n"+
                 "AllowedNumberOfBits: {1}\n" +
                 "Old storedInput: {2}\n" +
                 "Old storedInput length: {3}\n" +
                 "Result: {4}\n" +
                 "Result Length: {5}\n\n\n",
                 value, this.allowedNumberOfBits,
-                oldStoredInput, oldStoredInput.Length, this.storedInput, this.storedInput.Length );
+                oldStoredInput, oldStoredInput.Length, this.storedInput, this.storedInput.Length,value.Length );
 
         }
 
@@ -114,4 +115,6 @@ namespace TestBinCalc.TestObjects
             this.allowedNumberOfBits);
         }
     }
+
+    
 }

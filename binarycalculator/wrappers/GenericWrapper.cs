@@ -14,12 +14,19 @@ namespace binary_calculator.Wrappers
 
             #region "Properties"
 
-            protected string _storedInput;
+            private string _storedInput;
             private binary_calculator.dictionaries.Filters _filter;
 
             public virtual string storedInput
             {
-                get { return _storedInput; }
+                get 
+                {
+                    if (_storedInput == null || _storedInput.Length == 0)
+                    {
+                        _storedInput = "0";
+                    }
+                    return _storedInput; 
+                }
                 protected set { _storedInput = value; }
             }
 

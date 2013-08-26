@@ -6,13 +6,13 @@ using binary_calculator.Converters;
 using binary_calculator.Wrappers.Integers;
 using binary_calculator;
 using binary_calculator.Enums;
-using TestBinCalc.TestObjects;
+using TestBinCalc.DemoObjects;
 
 
 
 namespace TestBinCalc
 {
-    class TestNumberBaseConverter
+    class NumberBaseConverter_TEST
     {
         static void Main(string[] args)
         {
@@ -20,11 +20,57 @@ namespace TestBinCalc
             Console.ReadKey();
         }
 
+        private static void DecInteger_TEST()
+        {
+            int testSize = 8;
+            string testInput = "AB";
+            int testCount = 1;
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            DecInteger_DEMO dec = new DecInteger_DEMO(testSize, testInput);
+
+        }
+
         private static void BinInteger_TEST()
         {
             int testSize = 8;
             string testInput = "64";
-            BinInteger_TEST test1 = new BinInteger_TEST(testSize, testInput);
+            int testCount = 1;
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            BinInteger_DEMO test1 = new BinInteger_DEMO(testSize, testInput);
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.AddChar('a');
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ClearInput();
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.DeleteChar();
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("111111111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("11111111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.DeleteChar();
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.DeleteChar();
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.DeleteChar();
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("01010101");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("0101");
 
         }
 
