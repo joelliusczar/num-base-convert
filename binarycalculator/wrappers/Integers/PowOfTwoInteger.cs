@@ -3,7 +3,7 @@ using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class PowOfTwoInteger : GenericIntegerWrapper
+    public class PowOfTwoInteger : UndefinedIntegerWrapper
     {
             #region "constants for whole class"
 

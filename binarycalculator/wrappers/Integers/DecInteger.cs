@@ -2,7 +2,7 @@
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class DecInteger : GenericIntegerWrapper
+    public class DecInteger : UndefinedIntegerWrapper
     {
 
         #region "constants for whole class"

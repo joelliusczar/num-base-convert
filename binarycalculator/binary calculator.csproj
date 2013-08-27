@@ -54,7 +54,7 @@
     <Compile Include="Enums\NumberBases.cs" />
     <Compile Include="Enums\PowOfTwoBases.cs" />
     <Compile Include="Wrappers\Integers\DecInteger.cs" />
-    <Compile Include="Wrappers\GenericWrapper.cs" />
+    <Compile Include="Wrappers\UndefinedWrapper.cs" />
     <Compile Include="Wrappers\Integers\BinInteger.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -71,7 +71,7 @@
     <Compile Include="ProcessCalculatorInput.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wrappers\Integers\GenericIntegerWrapper.cs" />
+    <Compile Include="Wrappers\Integers\UndefinedIntegerWrapper.cs" />
     <Compile Include="Wrappers\Integers\PowOfTwoInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedBinInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedAnyInteger.cs" />

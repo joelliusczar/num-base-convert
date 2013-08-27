@@ -4,7 +4,7 @@
 
 namespace binary_calculator.Wrappers.Integers
 {
-    public class BinInteger : GenericIntegerWrapper
+    public class BinInteger : UndefinedIntegerWrapper
     {
         
         #region "constants for whole class"

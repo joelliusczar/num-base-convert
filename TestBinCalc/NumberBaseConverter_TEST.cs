@@ -58,6 +58,18 @@ namespace TestBinCalc
             test1.ReplaceStoredInput("11111111");
 
             Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("11111111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceAllowedNumberOfBits(4);
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceAllowedNumberOfBits(8);
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test1.ReplaceStoredInput("11111111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
             test1.DeleteChar();
 
             Console.Write("Test Number: {0}\n\n", testCount++);

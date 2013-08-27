@@ -3,7 +3,7 @@ using binary_calculator.Enums;
 
 namespace binary_calculator.Wrappers
 {
-    public abstract class GenericWrapper
+    public abstract class UndefinedWrapper
     {
         
 

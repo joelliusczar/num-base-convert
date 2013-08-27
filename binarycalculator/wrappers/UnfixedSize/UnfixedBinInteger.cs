@@ -2,7 +2,7 @@
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedBinInteger: GenericWrapper 
+    public class UnfixedBinInteger: UndefinedWrapper 
     {
         #region "constants for whole class"
 

@@ -1,7 +1,7 @@
 ﻿
 namespace binary_calculator.Wrappers.Integers
 {
-    public abstract class GenericIntegerWrapper:GenericWrapper  
+    public abstract class UndefinedIntegerWrapper:UndefinedWrapper  
     {
         
 

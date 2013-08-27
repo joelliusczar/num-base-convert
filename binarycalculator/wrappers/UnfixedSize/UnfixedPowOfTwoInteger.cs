@@ -2,14 +2,14 @@
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedPowOfTwoInteger: GenericWrapper
+    public class UnfixedPowOfTwoInteger: UndefinedWrapper
     {
         private PowOfTwoBases _baseChoice;
 
         public PowOfTwoBases baseChoice
         {
             get { return _baseChoice; }
-            private set 
+            private set //should this be changed to protected or something?
             {
 
                 _baseChoice = value;
