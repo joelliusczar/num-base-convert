@@ -59,7 +59,7 @@ namespace TestBinCalc.TestObjects
                 "MaxSize: {7}\n"+
                 "Old storedInput: {3}\n" +
                 "Old storedInput length: {4}\n" +
-                "Old storedNumber: {5}" +
+                "Old storedNumber: {5}\n" +
                 "Result: {1}\n" +
                 "Result Length: {2}\n"+
                 "Result as long: {6}\n\n\n",

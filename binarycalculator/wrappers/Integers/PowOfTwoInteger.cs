@@ -55,7 +55,7 @@ namespace binary_calculator.Wrappers.Integers
                 {
                     base.allowedNumberOfBits = value;
                     int binLength = GetBinaryLength(storedInput);
-                    if (binLength > base.allowedNumberOfBits) storedInput = "0";
+                    storedInput = "0";
                         
                 }
             }

@@ -30,17 +30,24 @@ namespace binary_calculator.Enums
 
         public PowOfTwoBases(PowOfTwoBases choice)
         {
-            setChoice(choice);
+            SetChoice(choice);
         }
 
         protected PowOfTwoBases(int value)
         {
             toInt = value;
+            SetChoice(toInt);
         }
 
-        public void setChoice(PowOfTwoBases baseChoice)
+        public void SetChoice(PowOfTwoBases baseChoice)
         {
             int choice = baseChoice.toInt;
+            SetChoice(choice);
+            
+        }
+
+        public void SetChoice(int choice)
+        {
             switch (choice)
             {
                 case 2:
@@ -52,7 +59,7 @@ namespace binary_calculator.Enums
                 case 16:
                     numberBase = NumberBases.BASE_SIXTEEN;
                     break;
-                
+
             }
         }
 

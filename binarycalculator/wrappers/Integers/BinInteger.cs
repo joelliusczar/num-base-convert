@@ -43,7 +43,7 @@ namespace binary_calculator.Wrappers.Integers
             set
             {
                 base.allowedNumberOfBits = value;
-                if (storedInput.Length > base.allowedNumberOfBits) storedInput = "";
+                storedInput = "";
                     
             }
         }

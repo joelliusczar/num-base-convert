@@ -53,7 +53,7 @@ namespace binary_calculator.Wrappers.Integers
                     maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 }
 
-                if (storedNumber > maxSize) storedInput = "0";
+                storedInput = "0";
                     
             }
         }
