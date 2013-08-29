@@ -48,7 +48,8 @@ namespace binary_calculator.dictionaries
         {
             string toBeReturned = "";
 
-            toBeReturned = toBinary[key];
+            char upperKey = char.Parse(key.ToString().ToUpper().ToString());
+            toBeReturned = toBinary[upperKey];
 
             return toBeReturned;
         }

@@ -64,8 +64,8 @@ namespace binary_calculator.Wrappers.Integers
             #region "Public Methods"
             public PowOfTwoInteger(PowOfTwoBases type, string input = "", int allowedBitNumber = 8)
             {
-                this.allowedNumberOfBits = allowedBitNumber;
                 this.baseChoice = type;
+                this.allowedNumberOfBits = allowedBitNumber;
                 this.storedInput = input;
             }
 

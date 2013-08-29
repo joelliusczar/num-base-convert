@@ -50,7 +50,7 @@ namespace TestBinCalc.DemoObjects
             Console.Write("Number Base: {0}\n", choice);
             Console.Write("storedInput: {0}\n", powOfTwo.storedInput);
             Console.Write("storedInput length: {0}\n", powOfTwo.storedInput.Length);
-            Console.Write("allowedNumberOfBits: {0}", powOfTwo.allowedNumberOfBits);
+            Console.Write("allowedNumberOfBits: {0}\n", powOfTwo.allowedNumberOfBits);
         }
 
         public void ConvertUnfixedPowOfTwo(string input)
