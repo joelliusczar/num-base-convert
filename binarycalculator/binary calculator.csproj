@@ -75,6 +75,7 @@
     <Compile Include="Wrappers\Integers\PowOfTwoInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedBinInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedAnyInteger.cs" />
+    <Compile Include="Wrappers\UnfixedSize\UnfixedDecInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedPowOfTwoInteger.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -98,7 +99,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Wrappers\SignedIntegers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

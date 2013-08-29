@@ -83,6 +83,9 @@ namespace TestBinCalc
             test.ConvertPowOfTwo("397d");
 
             Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertPowOfTwo("6a");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
             test.ConvertUnfixedPowOfTwo("397d");
 
             

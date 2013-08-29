@@ -48,9 +48,9 @@ namespace TestBinCalc.DemoObjects
             Console.Write("ConvertToPowOfTwo\n");
             Console.Write("Input: {0}\n", input);
             Console.Write("Number Base: {0}\n", choice);
-            Console.Write("storedInput: {0}\n", powOfTwo.storedInput);
-            Console.Write("storedInput length: {0}\n", powOfTwo.storedInput.Length);
-            Console.Write("allowedNumberOfBits: {0}\n", powOfTwo.allowedNumberOfBits);
+            Console.Write("result: {0}\n", bin.storedInput);
+            Console.Write("result length: {0}\n", bin.storedInput.Length);
+            Console.Write("result allowedNumberOfBits: {0}\n", bin.allowedNumberOfBits);
         }
 
         public void ConvertUnfixedPowOfTwo(string input)
@@ -60,8 +60,8 @@ namespace TestBinCalc.DemoObjects
             UnfixedBinInteger bin = test.Convert(UnfixedPowOfTwo);
             Console.Write("ConvertToUnfixedPowOfTwo\n");
             Console.Write("Input: {0}\n", input);
-            Console.Write("Number Base: {0}\n", choice);
-            Console.Write("storedInput: {0}\n", UnfixedPowOfTwo.storedInput);
+            Console.Write("result: {0}\n", bin.storedInput);
+            Console.Write("result length: {0}\n", bin.storedInput.Length);
             Console.Write("storedInput length: {0}\n", UnfixedPowOfTwo.storedInput.Length);
         }
 

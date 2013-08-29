@@ -1,5 +1,6 @@
 ﻿using System;
 using binary_calculator.Wrappers.Integers;
+using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Converters.Integers
 {
@@ -24,6 +25,17 @@ namespace binary_calculator.Converters.Integers
             string toBeConverted = input.storedInput;
             long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
             DecInteger output = new DecInteger(size, result.ToString());
+
+            return output;
+        }
+
+        public UnfixedDecInteger Convert(UnfixedBinInteger input)
+        {
+            int convertFromBase = 2;
+            string toBeConverted = input.storedInput;
+            long result = ToDecFromBinIntPos(toBeConverted, convertFromBase);
+
+            UnfixedDecInteger output = new UnfixedDecInteger(result.ToString());
 
             return output;
         }

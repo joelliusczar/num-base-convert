@@ -97,7 +97,7 @@ namespace binary_calculator.Converters.Integers
             dictionaries.DictionaryForBinary binDictionary = new dictionaries.DictionaryForBinary();
 
             //one string of 1's and 0's for each hex or oct character
-            Stack<string> binStack = new Stack<string>();
+            Queue<string> binQueue = new Queue<string>();
             string temp;
 
             //convert each character to binary
@@ -105,10 +105,10 @@ namespace binary_calculator.Converters.Integers
             {
                 temp = binDictionary.GetEquivalent(digit);
                 temp = temp.Substring(substringStartingPoint); //see note on substringStartingPoint
-                binStack.Push(temp);
+                binQueue.Enqueue(temp);
             }
 
-            result = string.Concat(binStack.ToArray());
+            result = string.Concat(binQueue.ToArray());
             result = outputAdjuster(result);
 
             return result;
