@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DemoObjects\BinInteger_DEMO.cs" />
     <Compile Include="DemoObjects\ConverterToBin_DEMO.cs" />
+    <Compile Include="DemoObjects\ConverterToDec_DEMO.cs" />
     <Compile Include="DemoObjects\DecInteger_DEMO.cs" />
     <Compile Include="DemoObjects\UnfixedAnyInteger_DEMO.cs" />
     <Compile Include="DemoObjects\UnfixedBinInteger_DEMO.cs" />

@@ -16,8 +16,62 @@ namespace TestBinCalc
     {
         static void Main(string[] args)
         {
-            ConverterToBin_TEST1();
+            ConverterToDec_TEST1();
             Console.ReadKey();
+        }
+
+        private static void ConverterToDec_TEST1()
+        {
+            int testCount = 1;
+            ConverterToDec_DEMO test = new ConverterToDec_DEMO(8, PowOfTwoBases.BASE_SIXTEEN);
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("0");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("1");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("10");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("11");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("100");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("1000");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("1010");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("1111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("10000");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("11111");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("100000");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("1000000");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("10101010");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("100000000");
+
+            Console.Write("Test Number: {0}\n\n", testCount++);
+            test.ConvertBin("11111111");
         }
 
         private static void ConverterToBin_TEST1()

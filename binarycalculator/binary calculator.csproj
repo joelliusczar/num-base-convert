@@ -54,6 +54,8 @@
     <Compile Include="Enums\NumberBases.cs" />
     <Compile Include="Enums\PowOfTwoBases.cs" />
     <Compile Include="Wrappers\Integers\DecInteger.cs" />
+    <Compile Include="Wrappers\SignedIntegers\SignedBinaryInteger.cs" />
+    <Compile Include="Wrappers\SignedIntegers\SignedDecInteger.cs" />
     <Compile Include="Wrappers\UndefinedWrapper.cs" />
     <Compile Include="Wrappers\Integers\BinInteger.cs" />
     <Compile Include="MainForm.cs">
@@ -99,9 +101,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Wrappers\SignedIntegers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

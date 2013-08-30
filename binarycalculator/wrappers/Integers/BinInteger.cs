@@ -28,11 +28,11 @@ namespace binary_calculator.Wrappers.Integers
                     if (value.Length == 0) base.storedInput = "0";
                 }
 
-                int numberOfFillerZerosNeeded = allowedNumberOfBits - base.storedInput.Length;
-                string filler = new string(FILL_STRING_WITH_THIS_CHAR__ZERO, numberOfFillerZerosNeeded);
-                base.storedInput = string.Concat(filler, base.storedInput);
+                base.storedInput =  FillOutWithSelectChar(base.storedInput);
             }
         }
+
+        
 
         public override int allowedNumberOfBits
         {
@@ -64,7 +64,17 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Private Methods"
+        protected virtual string FillOutWithSelectChar(string input)
+        {
+            string result = "";
+            int numberOfFillerZerosNeeded = allowedNumberOfBits - input.Length;
+            string filler = new string(FILL_STRING_WITH_THIS_CHAR__ZERO, numberOfFillerZerosNeeded);
+            result = string.Concat(filler, input);
 
+            return result;
+        }
+
+        
         #endregion
     }
 }

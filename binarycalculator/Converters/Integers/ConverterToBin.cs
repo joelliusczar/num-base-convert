@@ -26,7 +26,7 @@ namespace binary_calculator.Converters.Integers
 
         public BinInteger Convert(DecInteger input)
         {
-            long toBeConverted = input.storedNumber;
+            long toBeConverted = long.Parse(input.storedInput);
             int bitNumber = input.allowedNumberOfBits;
             string result = FromDecIntPos(toBeConverted, bitNumber);
             BinInteger output = new BinInteger( bitNumber, result);

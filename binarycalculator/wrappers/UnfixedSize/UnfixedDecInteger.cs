@@ -13,13 +13,6 @@ namespace binary_calculator.Wrappers.UnfixedSize
         #endregion
 
         #region "Properties"
-        private long _storedNumber;
-
-        public long storedNumber
-        {
-            get { return _storedNumber; }
-            private set { _storedNumber = value; }
-        }
 
         public override string storedInput
         {
@@ -35,7 +28,6 @@ namespace binary_calculator.Wrappers.UnfixedSize
                 if (validLong)
                 {
                     base.storedInput = value;
-                    storedNumber = temp;
                 }
             }
         }

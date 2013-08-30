@@ -44,18 +44,18 @@ namespace binary_calculator.Wrappers
             #endregion
 
             #region "Public Methods"
-            public void ClearInput()
+            public virtual void ClearInput()
             {
                 storedInput = "0";
             }
 
-            public void AddChar(char digit)
+            public virtual void AddChar(char digit)
             {
                 string storeConcat = string.Concat(storedInput, digit.ToString());
                 storedInput = storeConcat;
             }
 
-            public void deleteChar()
+            public virtual void deleteChar()
             {
                 string temp = storedInput.Substring(0, storedInput.Length - 1);
                 storedInput = temp;

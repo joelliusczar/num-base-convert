@@ -10,14 +10,7 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Properties"
-        private long _storedNumber;
         private int _maxSize;
-        
-        public long storedNumber
-        {
-            get { return _storedNumber; }
-            private set { _storedNumber = value; }
-        }        
 
         public override string storedInput
         {
@@ -30,7 +23,6 @@ namespace binary_calculator.Wrappers.Integers
                 if (TestAgainstSize(temp)&&validLong)
                 {
                     base.storedInput = value;
-                    storedNumber = temp;
                 }
                 
             }
@@ -67,7 +59,12 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Public Methods"
-        public DecInteger(int bitNumber = 8, string input = "")
+        /// <summary>
+        /// The 
+        /// </summary>
+        /// <param name="bitNumber"></param>
+        /// <param name="input">The Reason that this is a string is because of I want to take advantage of the AddChar method</param>
+        public DecInteger(int bitNumber = 8, string input = "") 
         {
             this.allowedNumberOfBits = bitNumber;
             storedInput = input;
@@ -79,11 +76,6 @@ namespace binary_calculator.Wrappers.Integers
         #endregion
 
         #region "Private Methods"
-        private void copyInput(DecInteger input)
-        {
-            this.allowedNumberOfBits = input.allowedNumberOfBits;
-            this.storedInput = input.storedInput;
-        }
 
         private bool TestAgainstSize(long value)
         {
