@@ -1,5 +1,5 @@
 ﻿
-namespace binary_calculator.Enums
+namespace binary_calculator.EnumsAndConstants
 {
     /// <summary>
     /// This class is an encapsulation of number base that is used to restrict number base to a select types while maintaining compatibility.

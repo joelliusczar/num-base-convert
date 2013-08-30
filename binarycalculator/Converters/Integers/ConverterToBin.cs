@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using binary_calculator.Wrappers.Integers;
-using binary_calculator.Enums;
+using binary_calculator.EnumsAndConstants;
 using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Converters.Integers
@@ -26,7 +26,7 @@ namespace binary_calculator.Converters.Integers
 
         public BinInteger Convert(DecInteger input)
         {
-            long toBeConverted = long.Parse(input.storedInput);
+            long toBeConverted = input.StoredNumber;
             int bitNumber = input.allowedNumberOfBits;
             string result = FromDecIntPos(toBeConverted, bitNumber);
             BinInteger output = new BinInteger( bitNumber, result);

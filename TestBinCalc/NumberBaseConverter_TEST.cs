@@ -5,7 +5,7 @@ using System.Text;
 using binary_calculator.Converters;
 using binary_calculator.Wrappers.Integers;
 using binary_calculator;
-using binary_calculator.Enums;
+using binary_calculator.EnumsAndConstants;
 using TestBinCalc.DemoObjects;
 
 

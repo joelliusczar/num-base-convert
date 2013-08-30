@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.Wrappers.UnfixedSize;
-using binary_calculator.Enums;
+using binary_calculator.EnumsAndConstants;
 
 namespace TestBinCalc.TestObjects
 {

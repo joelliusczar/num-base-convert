@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using binary_calculator.Enums;
+using binary_calculator.EnumsAndConstants;
 
 namespace binary_calculator.Wrappers
 {

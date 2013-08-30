@@ -1,4 +1,4 @@
-﻿using binary_calculator.Enums;
+﻿using binary_calculator.EnumsAndConstants;
 using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Wrappers.Integers

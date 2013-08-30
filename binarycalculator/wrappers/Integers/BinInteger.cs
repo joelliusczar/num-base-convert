@@ -1,4 +1,4 @@
-﻿using binary_calculator.Enums;
+﻿using binary_calculator.EnumsAndConstants;
 
 
 
@@ -8,7 +8,7 @@ namespace binary_calculator.Wrappers.Integers
     {
         
         #region "constants for whole class"
-        protected const char FILL_STRING_WITH_THIS_CHAR__ZERO = '0';
+        
         #endregion
 
         #region "Properties"
@@ -68,7 +68,7 @@ namespace binary_calculator.Wrappers.Integers
         {
             string result = "";
             int numberOfFillerZerosNeeded = allowedNumberOfBits - input.Length;
-            string filler = new string(FILL_STRING_WITH_THIS_CHAR__ZERO, numberOfFillerZerosNeeded);
+            string filler = new string(Constants.FILL_STRING_WITH_THIS_CHAR__ZERO, numberOfFillerZerosNeeded);
             result = string.Concat(filler, input);
 
             return result;

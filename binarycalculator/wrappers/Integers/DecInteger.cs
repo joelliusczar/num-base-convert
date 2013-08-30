@@ -11,6 +11,16 @@ namespace binary_calculator.Wrappers.Integers
 
         #region "Properties"
         private int _maxSize;
+        private long _storedNumber;
+
+
+
+        public long StoredNumber
+        {
+            get { return _storedNumber; }
+            set { _storedNumber = value; }
+        }
+
 
         public override string storedInput
         {
@@ -23,6 +33,7 @@ namespace binary_calculator.Wrappers.Integers
                 if (TestAgainstSize(temp)&&validLong)
                 {
                     base.storedInput = value;
+                    StoredNumber = temp;
                 }
                 
             }
@@ -36,15 +47,15 @@ namespace binary_calculator.Wrappers.Integers
                 if (value < 0)
                 {
                     base.allowedNumberOfBits = 1;
-                    maxSize = (int)Math.Pow(2, allowedNumberOfBits);
 
                 }
                 else
                 {
                     base.allowedNumberOfBits = value;
-                    maxSize = (int)Math.Pow(2, allowedNumberOfBits);
+                    
                 }
 
+                maxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 storedInput = "0";
                     
             }
@@ -70,9 +81,12 @@ namespace binary_calculator.Wrappers.Integers
             storedInput = input;
         }
 
-        
+        public DecInteger(int bitNumber = 8, long input = 0)
+        {
+            this.allowedNumberOfBits = bitNumber;
+            storedInput = input.ToString();
+        }
 
-        
         #endregion
 
         #region "Private Methods"

@@ -24,7 +24,7 @@ namespace binary_calculator.Converters.Integers
             int convertFromBase = 2;
             string toBeConverted = input.storedInput;
             long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
-            DecInteger output = new DecInteger(size, result.ToString());
+            DecInteger output = new DecInteger(size, result);
 
             return output;
         }
@@ -35,7 +35,7 @@ namespace binary_calculator.Converters.Integers
             string toBeConverted = input.storedInput;
             long result = ToDecFromBinIntPos(toBeConverted, convertFromBase);
 
-            UnfixedDecInteger output = new UnfixedDecInteger(result.ToString());
+            UnfixedDecInteger output = new UnfixedDecInteger(result);
 
             return output;
         }

@@ -14,6 +14,15 @@ namespace binary_calculator.Wrappers.UnfixedSize
 
         #region "Properties"
 
+        private long _storedNumber;
+
+        public long StoredNumber
+        {
+            get { return _storedNumber; }
+            set { _storedNumber = value; }
+        }
+
+
         public override string storedInput
         {
             get
@@ -28,6 +37,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
                 if (validLong)
                 {
                     base.storedInput = value;
+                    this.StoredNumber = temp;
                 }
             }
         }
@@ -37,6 +47,11 @@ namespace binary_calculator.Wrappers.UnfixedSize
         public UnfixedDecInteger(string input = "")
         {
             storedInput = input;
+        }
+
+        public UnfixedDecInteger(long input = 0)
+        {
+            storedInput = input.ToString();
         }
         #endregion
 

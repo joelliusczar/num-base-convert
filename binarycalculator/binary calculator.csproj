@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinCalc.cs" />
+    <Compile Include="EnumsAndConstants\Constants.cs" />
     <Compile Include="Converters\ConverterToAny.cs" />
+    <Compile Include="Converters\SignedIntegerConverters\ConverterToSignedBin.cs" />
     <Compile Include="dictionaries\DictionaryForBinary.cs" />
     <Compile Include="dictionaries\DictionaryForDecimals.cs" />
     <Compile Include="dictionaries\Filters.cs" />
-    <Compile Include="Enums\NumberBases.cs" />
-    <Compile Include="Enums\PowOfTwoBases.cs" />
+    <Compile Include="EnumsAndConstants\NumberBases.cs" />
+    <Compile Include="EnumsAndConstants\PowOfTwoBases.cs" />
     <Compile Include="Wrappers\Integers\DecInteger.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedBinaryInteger.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedDecInteger.cs" />
