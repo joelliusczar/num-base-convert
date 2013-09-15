@@ -6,6 +6,7 @@ using binary_calculator.EnumsAndConstants;
 using binary_calculator.Wrappers.SignedIntegers;
 using binary_calculator.Wrappers.Integers;
 using binary_calculator.Wrappers.UnfixedSize;
+using binary_calculator.Converters.Integers;
 
 namespace binary_calculator.Converters.SignedIntegerConverters
 {
@@ -20,13 +21,45 @@ namespace binary_calculator.Converters.SignedIntegerConverters
         #endregion
 
         #region "Public Methods"
-        public SignedBinaryInteger Convert(SignedDecInteger unsigned)
+        public SignedBinaryInteger Convert(SignedDecInteger signedDecInteger)
         {
-            throw new NotImplementedException();
+            long inputNumber = signedDecInteger.StoredNumber;
+            int size = signedDecInteger.allowedNumberOfBits;
+            SignedBinaryInteger signedBin;
+
+            if (inputNumber >= 0)
+            {
+                DecInteger dec = new DecInteger(size, inputNumber);
+                ConverterToBin binConvert = new ConverterToBin();
+                BinInteger bin = binConvert.Convert(dec);
+                signedBin = new SignedBinaryInteger(
+                    bin.storedInput, bin.allowedNumberOfBits, Constants.POSITIVE);
+                return signedBin;
+            }
+            else
+            {
+                
+                string negBinRepresentation = this.decToBinNeg(inputNumber, size);
+                signedBin = new SignedBinaryInteger(
+                    negBinRepresentation, size, Constants.NEGATIVE);
+            }
+
+            return signedBin;
+
         }
 
+        public SignedBinaryInteger Negate(SignedBinaryInteger signedBinaryInteger)
+        {
+            string toBeNegated = signedBinaryInteger.storedInput;
+            string result = this.NegateBin(toBeNegated);
 
-        public SignedBinaryInteger Convert(BinInteger unsigned)
+            signedBinaryInteger.ReverseSign();
+            signedBinaryInteger.storedInput = result;
+
+            return signedBinaryInteger;
+        }
+
+        public SignedBinaryInteger Negate(BinInteger unsigned)
         {
             string toBeNegated = unsigned.storedInput;
             string result = this.NegateBin(toBeNegated);
@@ -42,22 +75,26 @@ namespace binary_calculator.Converters.SignedIntegerConverters
         //this method is for negative integers only, not fractions or positive numbers
         public string decToBinNeg(long input, int size)
         {//decToBinNeg
-            const int mathmaticallyNecessaryCorrection = 1;
+            const int MATHEMATICALLY_NECESSARY_CORRECTION = 1;
 
             if (input == -1) //special case for when input is -1
             {//if
 
-                return new string(Constants.FILL_STRING_WITH_THIS_CHAR__ONE, size);
+                return new string(Constants.ONE, size);
             }//if
             else
             {//else
                 //make input positive
                 //mathmaticallyNecessaryCorrection = -1
-                long input2 = Math.Abs(input) - mathmaticallyNecessaryCorrection;
+                long inputAdjusted = Math.Abs(input) - MATHEMATICALLY_NECESSARY_CORRECTION;
+
+                DecInteger dec = new DecInteger(size, inputAdjusted);
+                ConverterToBin binConvert = new ConverterToBin();
+                BinInteger unsignedBin = binConvert.Convert(dec);
 
                 //convert the positive number to binary
                 //arguement size affects whether you'll get 0010 vs 00000010
-                String inputAsPosBin = fromDecIntConversionPos(input2, size, NumberBases.BASE_TWO);
+                String inputAsPosBin = unsignedBin.storedInput;
 
                 string toBeReturned = NegateBin(inputAsPosBin);
 

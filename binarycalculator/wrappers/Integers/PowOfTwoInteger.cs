@@ -28,7 +28,7 @@ namespace binary_calculator.Wrappers.Integers
                 {
                     return base.storedInput;
                 }
-                protected set
+                set
                 {
 
                     bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice.numberBase);

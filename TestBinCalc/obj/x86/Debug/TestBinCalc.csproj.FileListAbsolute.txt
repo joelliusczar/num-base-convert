@@ -19,3 +19,5 @@ C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\TestBinCalc.e
 C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\TestBinCalc.pdb
 C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\binary calculator.exe
 C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\binary calculator.pdb
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\nunit.framework.dll
+C:\Users\Joel\Code\bin_calc\num-base-convert\TestBinCalc\bin\Debug\nunit.framework.xml

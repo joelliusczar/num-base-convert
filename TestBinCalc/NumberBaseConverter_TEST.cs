@@ -20,6 +20,8 @@ namespace TestBinCalc
             Console.ReadKey();
         }
 
+        
+
         private static void ConverterToDec_TEST1()
         {
             int testCount = 1;

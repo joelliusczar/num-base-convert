@@ -27,7 +27,7 @@ namespace binary_calculator.Wrappers
                     }
                     return _storedInput; 
                 }
-                protected set { _storedInput = value; }
+                set { _storedInput = value; }
             }
 
             protected binary_calculator.dictionaries.Filters filter
@@ -41,6 +41,20 @@ namespace binary_calculator.Wrappers
                 }
             }
         
+            #endregion
+
+            #region "Getters"
+            //public virtual string GetStoredInput()
+            //{
+            //    if (_storedInput == null || _storedInput.Length == 0)
+            //    {
+            //        _storedInput = "0";
+            //    }
+            //    return _storedInput; 
+            //}
+            #endregion
+
+            #region "Setters"
             #endregion
 
             #region "Public Methods"

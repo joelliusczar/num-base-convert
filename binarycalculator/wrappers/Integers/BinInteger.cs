@@ -16,19 +16,18 @@ namespace binary_calculator.Wrappers.Integers
 
         public override string storedInput
         {
-            get { return base.storedInput; }
-            protected set 
+            get { return FillOutWithSelectChar(base.storedInput); }
+            set 
             {
                 
 
                 bool inputAllowed = AreAllCharsOfInputLegal(value,NumberBases.BASE_TWO);
                 if (inputAllowed)
                 {
-                    if (value.Length <= allowedNumberOfBits) base.storedInput = value;
+                    if (value.Length <= GetAllowedLength()) base.storedInput = value;
                     if (value.Length == 0) base.storedInput = "0";
                 }
 
-                base.storedInput =  FillOutWithSelectChar(base.storedInput);
             }
         }
 
@@ -67,11 +66,16 @@ namespace binary_calculator.Wrappers.Integers
         protected virtual string FillOutWithSelectChar(string input)
         {
             string result = "";
-            int numberOfFillerZerosNeeded = allowedNumberOfBits - input.Length;
-            string filler = new string(Constants.FILL_STRING_WITH_THIS_CHAR__ZERO, numberOfFillerZerosNeeded);
+            int numberOfFillerZerosNeeded = GetAllowedLength() - input.Length;
+            string filler = new string(Constants.ZERO, numberOfFillerZerosNeeded);
             result = string.Concat(filler, input);
 
             return result;
+        }
+
+        protected virtual int GetAllowedLength()
+        {
+            return allowedNumberOfBits; 
         }
 
         

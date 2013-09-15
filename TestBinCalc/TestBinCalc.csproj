@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +53,7 @@
     <Compile Include="DemoObjects\UnfixedAnyInteger_DEMO.cs" />
     <Compile Include="DemoObjects\UnfixedBinInteger_DEMO.cs" />
     <Compile Include="DemoObjects\UnfixedPowOfTwoInteger_DEMO.cs" />
+    <Compile Include="NumBaseConverter_UnitTester.cs" />
     <Compile Include="NumberBaseConverter_TEST.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestObjects\BinInteger_TEST.cs" />
@@ -63,6 +67,9 @@
       <Project>{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}</Project>
       <Name>binary calculator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

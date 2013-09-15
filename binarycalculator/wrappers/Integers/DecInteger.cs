@@ -25,7 +25,7 @@ namespace binary_calculator.Wrappers.Integers
         public override string storedInput
         {
             get { return base.storedInput; }
-            protected set 
+            set 
             {
                 long temp;
                 if ( value.Length == 0) value = "0";

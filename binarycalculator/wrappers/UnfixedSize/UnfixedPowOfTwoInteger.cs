@@ -24,7 +24,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
             {
                 return base.storedInput;
             }
-            protected set
+            set
             {
                 if (storedInput == null || storedInput.Length == 0)
                     {
