@@ -1,51 +1,56 @@
 ﻿using binary_calculator.EnumsAndConstants;
+using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedBinInteger: UndefinedWrapper 
+    public class UnfixedBinInteger: Undefined
     {
         #region "constants for whole class"
 
         #endregion
 
         #region "Properties"
-        public override string storedInput
+
+
+        public override string StoredInput
         {
             get
             {
-                return base.storedInput;
+                return base.StoredInput;
             }
             set
             {
-                if (base.storedInput == null || base.storedInput.Length == 0)
-                {
-                    base.storedInput = "0";
-                }
 
-                bool inputAllowed = AreAllCharsOfInputLegal(value, NumberBases.BASE_TWO);
-                if (inputAllowed)
-                {
-                    value = value.TrimStart('0');
+                string result = "";
 
-                    if (value.Length == 0) base.storedInput = "0";
-                    else base.storedInput = value;
+                bool isValid = BinUtilities.VerifyInput(value,base.StoredInput,out result);
 
-
-                }
+                base.StoredInput = result;
+                
             }
         }
+
+        #endregion
+
+        #region "contructors"
+        public UnfixedBinInteger(string input = "")
+        {
+            this.StoredInput = input;
+            
+        }
+
+
         #endregion
 
         #region "Public Methods"
-        public UnfixedBinInteger(string input)
-        {
-            this.storedInput = input;
-        }
 
         #endregion
 
         #region "Private Methods"
-
+        protected override void SetStoredInput(string input)
+        {
+            this.StoredInput = input;
+        }
 
         #endregion
     }

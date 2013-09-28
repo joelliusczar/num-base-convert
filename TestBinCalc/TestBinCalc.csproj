@@ -46,21 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DemoObjects\BinInteger_DEMO.cs" />
-    <Compile Include="DemoObjects\ConverterToBin_DEMO.cs" />
-    <Compile Include="DemoObjects\ConverterToDec_DEMO.cs" />
-    <Compile Include="DemoObjects\DecInteger_DEMO.cs" />
-    <Compile Include="DemoObjects\UnfixedAnyInteger_DEMO.cs" />
-    <Compile Include="DemoObjects\UnfixedBinInteger_DEMO.cs" />
-    <Compile Include="DemoObjects\UnfixedPowOfTwoInteger_DEMO.cs" />
     <Compile Include="NumBaseConverter_UnitTester.cs" />
     <Compile Include="NumberBaseConverter_TEST.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestObjects\BinInteger_TEST.cs" />
-    <Compile Include="TestObjects\DecInteger_TEST.cs" />
-    <Compile Include="TestObjects\UnfixedAnyInteger_TEST.cs" />
+    <Compile Include="TestObjects\BinInt_TEST.cs" />
+    <Compile Include="TestObjects\BinUtilities_TEST.cs" />
+    <Compile Include="TestObjects\IWrapperTest.cs" />
+    <Compile Include="TestObjects\SignedBinInt_TEST.cs" />
     <Compile Include="TestObjects\UnfixedBinInteger_TEST.cs" />
-    <Compile Include="TestObjects\UnfixedPowOfTwoInterger_TEST.cs" />
+    <Compile Include="TestObjects\UnfixedDecInteger_TEST.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\binarycalculator\binary calculator.csproj">
@@ -71,6 +65,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

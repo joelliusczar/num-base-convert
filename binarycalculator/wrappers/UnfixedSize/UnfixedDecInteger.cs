@@ -5,7 +5,7 @@ using System.Text;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedDecInteger: UndefinedWrapper
+    public class UnfixedDecInteger: Undefined
     {
 
         #region "constants for whole class"
@@ -13,32 +13,59 @@ namespace binary_calculator.Wrappers.UnfixedSize
         #endregion
 
         #region "Properties"
+        private uint _storedNumber;
 
-        private long _storedNumber;
-
-        public long StoredNumber
+        private uint SafeStoredNumber
         {
-            get { return _storedNumber; }
-            set { _storedNumber = value; }
+            set
+            {
+                this._storedNumber = value;
+            }
         }
 
+        public uint StoredNumber
+        {
+            get { return this._storedNumber; }
+            set 
+            {
+               this._storedNumber = value;
+               this.SafeStoredInput = value.ToString();
+            }
+        }
 
-        public override string storedInput
+        private string SafeStoredInput
+        {
+            set
+            {
+                base.StoredInput = value;
+            }
+        }
+
+        public override string StoredInput
         {
             get
             {
-                return base.storedInput;
+                return base.StoredInput;
             }
             set
             {
-                long temp;
+                uint temp;
+
+                value = value.TrimStart('0');
                 if (value.Length == 0) value = "0";
-                bool validLong = (long.TryParse(value, out temp));
-                if (validLong)
+                value = value.Replace("-", "");
+                bool validUint = (uint.TryParse(value, out temp));
+                if (validUint)
                 {
-                    base.storedInput = value;
-                    this.StoredNumber = temp;
+                    base.StoredInput = value;
+                    this.SafeStoredNumber = temp;
                 }
+                else if (base.StoredInput == null)
+                {
+                    base.StoredInput = "0";
+                    this.SafeStoredNumber = 0;
+                }
+
             }
         }
         #endregion
@@ -46,18 +73,22 @@ namespace binary_calculator.Wrappers.UnfixedSize
         #region "Public Methods"
         public UnfixedDecInteger(string input = "")
         {
-            storedInput = input;
+            StoredInput = input;
         }
 
-        public UnfixedDecInteger(long input = 0)
+        public UnfixedDecInteger(uint input = 0)
         {
-            storedInput = input.ToString();
+            StoredNumber = input;
         }
+
+
         #endregion
 
         #region "Private Methods"
-
-
+        protected override void SetStoredInput(string input)
+        {
+            this.StoredInput = input;
+        }
         #endregion
 
         
