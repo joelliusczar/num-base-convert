@@ -24,40 +24,41 @@ namespace binary_calculator.Converters.Integers
         {
         }
 
-        public BinInteger Convert(DecInteger input)
+        public BinInt Convert(DecInt input)
         {
             long toBeConverted = input.StoredNumber;
             int bitNumber = input.allowedNumberOfBits;
             string result = FromDecIntPos(toBeConverted, bitNumber);
-            BinInteger output = new BinInteger( bitNumber, result);
+            BinInt output = new BinInt(result, bitNumber);
 
             return output;
         }
+        
+        //TO DO: Add back once PowOfTwoInteger is adjusted
+        //public BinInt Convert(PowOfTwoInteger input)
+        //{
+        //    int bitNumber = input.allowedNumberOfBits;
+        //    NumberBases baseChoice = input.GetNumberBase();
+        //    string storedInput = input.storedInput;
+        //    string result = FromPowerOfTwoIntPos(storedInput, baseChoice);
 
-        public BinInteger Convert(PowOfTwoInteger input)
-        {
-            int bitNumber = input.allowedNumberOfBits;
-            NumberBases baseChoice = input.GetNumberBase();
-            string storedInput = input.storedInput;
-            string result = FromPowerOfTwoIntPos(storedInput, baseChoice);
+        //    BinInteger output = new BinInteger(bitNumber, result);
 
-            BinInteger output = new BinInteger(bitNumber, result);
+        //    return output;
 
-            return output;
+        //}
 
-        }
+        //public UnfixedBinInteger Convert(UnfixedPowOfTwoInteger input)
+        //{
+        //    string toBeConverted = input.storedInput;
+        //    NumberBases numberBase = input.GetNumberBase();
 
-        public UnfixedBinInteger Convert(UnfixedPowOfTwoInteger input)
-        {
-            string toBeConverted = input.storedInput;
-            NumberBases numberBase = input.GetNumberBase();
+        //    string result = FromPowerOfTwoIntPos(toBeConverted, numberBase);
 
-            string result = FromPowerOfTwoIntPos(toBeConverted, numberBase);
+        //    UnfixedBinInteger bin = new UnfixedBinInteger(result);
+        //    return bin;
 
-            UnfixedBinInteger bin = new UnfixedBinInteger(result);
-            return bin;
-
-        }
+        //}
 
         #endregion
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
@@ -51,26 +52,31 @@ namespace binary_calculator.Wrappers.UnfixedSize
             {
                 uint temp;
 
-                value = value.TrimStart('0');
-                if (value.Length == 0) value = "0";
-                value = value.Replace("-", "");
-                bool validUint = (uint.TryParse(value, out temp));
-                if (validUint)
-                {
-                    base.StoredInput = value;
-                    this.SafeStoredNumber = temp;
-                }
-                else if (base.StoredInput == null)
-                {
-                    base.StoredInput = "0";
-                    this.SafeStoredNumber = 0;
-                }
+                DecUtilities.VerifyInput(value, this.StoredNumber, out temp, base.StoredInput == null);
+
+                base.StoredInput = temp.ToString();
+                this.SafeStoredNumber = temp;
+
+                //value = value.TrimStart('0');
+                //if (value.Length == 0) value = "0";
+                //value = value.Replace("-", "");
+                //bool validUint = (uint.TryParse(value, out temp));
+                //if (validUint)
+                //{
+                //    base.StoredInput = value;
+                //    this.SafeStoredNumber = temp;
+                //}
+                //else if (base.StoredInput == null)
+                //{
+                //    base.StoredInput = "0";
+                //    this.SafeStoredNumber = 0;
+                //}
 
             }
         }
         #endregion
 
-        #region "Public Methods"
+        #region "constructor"
         public UnfixedDecInteger(string input = "")
         {
             StoredInput = input;
@@ -80,7 +86,9 @@ namespace binary_calculator.Wrappers.UnfixedSize
         {
             StoredNumber = input;
         }
+        #endregion
 
+        #region "Public Methods"
 
         #endregion
 

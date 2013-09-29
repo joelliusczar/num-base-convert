@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestObjects\BinInt_TEST.cs" />
     <Compile Include="TestObjects\BinUtilities_TEST.cs" />
+    <Compile Include="TestObjects\DecInt_TEST.cs" />
     <Compile Include="TestObjects\IWrapperTest.cs" />
     <Compile Include="TestObjects\SignedBinInt_TEST.cs" />
     <Compile Include="TestObjects\UnfixedBinInteger_TEST.cs" />

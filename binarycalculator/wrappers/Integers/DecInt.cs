@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.Wrappers.UnfixedSize;
+using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.Integers
 {
@@ -12,6 +13,16 @@ namespace binary_calculator.Wrappers.Integers
 
         #region "properties"
         private UnfixedDecInteger _unfixedDec;
+
+        private UnfixedDecInteger UnfixedDec
+        {
+            get 
+            {
+                if (_unfixedDec == null) _unfixedDec = new UnfixedDecInteger(0);
+                return _unfixedDec; 
+            }
+            set { _unfixedDec = value; }
+        }
         private int _maxSize;
         private int _allowedNumberOfBits;
 
@@ -28,7 +39,8 @@ namespace binary_calculator.Wrappers.Integers
             {
                 if (value < 0)
                 {
-                    _allowedNumberOfBits = 1;
+                    if (_allowedNumberOfBits < 1) _allowedNumberOfBits = 1;
+                    
                 }
                 else
                 {
@@ -36,7 +48,7 @@ namespace binary_calculator.Wrappers.Integers
                 }
 
                 maxSize = (int)Math.Pow(2, allowedNumberOfBits);
-                StoredInput = "0";
+                StoredNumber = 0;
             }
         }
 
@@ -44,20 +56,66 @@ namespace binary_calculator.Wrappers.Integers
         {
             get
             {
-                if (_unfixedDec == null) _unfixedDec = new UnfixedDecInteger(0);
+                
 
-                return _unfixedDec.StoredInput;
+                return UnfixedDec.StoredInput;
             }
             set
             {
+                uint temp;
+
+                DecUtilities.VerifyInput(value, UnfixedDec.StoredNumber, out temp, UnfixedDec.StoredInput == null);
+                this.StoredNumber = temp;
+
+            }
+        }
+
+        public uint StoredNumber
+        {
+            get
+            {
+                return UnfixedDec.StoredNumber;
+            }
+            set
+            {
+                if (TestAgainstSize(value))
+                {
+                    UnfixedDec.StoredNumber = value;
+                }
             }
         }
         #endregion
 
         #region "contructors"
+        public DecInt(uint input = 0,int allowedNumberOfBits = 8)
+        {
+            this.allowedNumberOfBits = allowedNumberOfBits;
+            this.StoredNumber = input;
+        }
+
+        public DecInt(string input = "",int allowedNumberOfBits = 8)
+        {
+            this.allowedNumberOfBits = allowedNumberOfBits;
+            this.StoredInput = input;
+        }
+
         #endregion
 
         #region "public methods"
+        public void AddChar(char digit)
+        {
+            this.StoredInput = string.Concat(UnfixedDec.StoredInput, digit.ToString());
+        }
+
+        public void DeleteChar()
+        {
+            UnfixedDec.DeleteChar();
+        }
+
+        public void ClearInput()
+        {
+            UnfixedDec.ClearInput();
+        }
         #endregion
 
         #region "private methods"

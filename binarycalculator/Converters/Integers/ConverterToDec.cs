@@ -18,16 +18,16 @@ namespace binary_calculator.Converters.Integers
 
         #region "Public Methods"
 
-        public DecInteger Convert(BinInteger input)
-        {
-            int size = input.allowedNumberOfBits;
-            int convertFromBase = 2;
-            string toBeConverted = input.storedInput;
-            long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
-            DecInteger output = new DecInteger(size, result);
+        //public DecInt Convert(BinInt input)
+        //{
+        //    int size = input.allowedNumberOfBits;
+        //    int convertFromBase = 2;
+        //    string toBeConverted = input.StoredInput;
+        //    long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
+        //    DecInt output = new DecInt(size, result);
 
-            return output;
-        }
+        //    return output;
+        //}
 
         public UnfixedDecInteger Convert(UnfixedBinInteger input)
         {
