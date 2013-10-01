@@ -63,7 +63,7 @@ namespace binary_calculator.Wrappers.SignedIntegers
                 storedInput = "0";
 
             }
-        }
+        }  
 
         public int MaxSize
         {

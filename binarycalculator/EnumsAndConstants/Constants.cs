@@ -15,5 +15,6 @@ namespace binary_calculator.EnumsAndConstants
         public const int BEGINING_OF_STRING = 0;
         public const bool POSITIVE = false;
         public const bool NEGATIVE = true;
+        public const int CHAR_NOT_FOUND = -1;
     }
 }

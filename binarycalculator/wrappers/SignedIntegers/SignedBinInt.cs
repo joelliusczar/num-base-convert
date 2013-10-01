@@ -84,20 +84,11 @@ namespace binary_calculator.Wrappers.SignedIntegers
                     _storedInput = result;
                 }
 
-                //if (this.SignBit && !value.Equals("0"))
-                //{
-                //    TrimmedOff = BinUtilities.GetFiller(
-                //        _storedInput,
-                //        BitNumberAdjustedForSignBit, '1');
-
-                //}
-                //else
-                //{
+               
                     TrimmedOff = BinUtilities.GetFiller(
                         _storedInput,
                         BitNumberAdjustedForSignBit, '0');
 
-                //}
 
                 
 
@@ -120,24 +111,7 @@ namespace binary_calculator.Wrappers.SignedIntegers
         #endregion
 
         #region "public methods"
-        //public void StoreBinaryNumber(string input)
-        //{
 
-        //    if (UnfixedBin == null) UnfixedBin = new UnfixedBinInteger("");
-
-        //    if (input.Length <= allowedNumberOfBits - Constants.SIZE_ADJUSTER_FOR_SIGN_BIT)
-        //    {
-        //        UnfixedBin.StoredInput = input;
-        //    }
-        //    if (input.Length == 0) UnfixedBin.StoredInput = "0";
-
-        //}
-
-        //public string GetStoredBinaryNumber()
-        //{
-            
-
-        //}
 
         public bool GetSign()
         {

@@ -26,7 +26,7 @@ namespace binary_calculator.Wrappers.Integers
         private int _maxSize;
         private int _allowedNumberOfBits;
 
-        public int maxSize
+        public int MaxSize
         {
             get { return _maxSize; }
             private set { _maxSize = value; }
@@ -47,7 +47,7 @@ namespace binary_calculator.Wrappers.Integers
                     _allowedNumberOfBits = value;
                 }
 
-                maxSize = (int)Math.Pow(2, allowedNumberOfBits);
+                MaxSize = (int)Math.Pow(2, allowedNumberOfBits);
                 StoredNumber = 0;
             }
         }
@@ -121,7 +121,7 @@ namespace binary_calculator.Wrappers.Integers
         #region "private methods"
         private bool TestAgainstSize(long value)
         {
-            return (value < maxSize) && (value >= 0);
+            return (value < MaxSize) && (value >= 0);
         }
         #endregion
     }

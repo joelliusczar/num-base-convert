@@ -75,6 +75,7 @@
     <Compile Include="Unused\DecInteger.cs" />
     <Compile Include="Unused\SignedBinaryInteger.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedBinInt.cs" />
+    <Compile Include="Wrappers\SignedIntegers\SignedDecInt.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedDecInteger.cs" />
     <Compile Include="Wrappers\Undefined.cs" />
     <Compile Include="Unused\UndefinedWrapper.cs" />
@@ -99,7 +100,7 @@
     <Compile Include="Wrappers\UnfixedSize\UnfixedBinInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedAnyInteger.cs" />
     <Compile Include="Wrappers\UnfixedSize\UnfixedDecInteger.cs" />
-    <Compile Include="Unused\UnfixedPowOfTwoInteger.cs" />
+    <Compile Include="Wrappers\UnfixedSize\UnfixedPowOfTwoInteger.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
