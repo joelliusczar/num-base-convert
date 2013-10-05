@@ -1,6 +1,8 @@
 ﻿using System;
 using binary_calculator.Wrappers.Integers;
 using binary_calculator.Wrappers.UnfixedSize;
+using binary_calculator.Wrappers;
+using binary_calculator.EnumsAndConstants;
 
 namespace binary_calculator.Converters.Integers
 {
@@ -18,23 +20,30 @@ namespace binary_calculator.Converters.Integers
 
         #region "Public Methods"
 
-        //public DecInt Convert(BinInt input)
-        //{
-        //    int size = input.allowedNumberOfBits;
-        //    int convertFromBase = 2;
-        //    string toBeConverted = input.StoredInput;
-        //    long result = ToDecFromBinIntPos(toBeConverted,convertFromBase);
-        //    DecInt output = new DecInt(size, result);
+        public DecInt Convert(BinInt input)
+        {
+            int size = input.allowedNumberOfBits;
+            int convertFromBase = 2;
+            string toBeConverted = input.StoredInput;
+            uint result = ToDecFromIntPos(toBeConverted, convertFromBase);
+            DecInt output = new DecInt(result,size);
 
-        //    return output;
-        //}
+            return output;
+        }
 
         public UnfixedDecInteger Convert(UnfixedBinInteger input)
         {
-            int convertFromBase = 2;
-            string toBeConverted = input.StoredInput;
-            uint result = ToDecFromBinIntPos(toBeConverted, convertFromBase);
+            uint result = SetUpConvert(input, (int)NumberBases.BASE_TWO);
 
+            UnfixedDecInteger output = new UnfixedDecInteger(result);
+
+            return output;
+        }
+
+        public UnfixedDecInteger Convert(UnfixedPowOfTwoInteger input)
+        {
+            int numberBase = (int)input.GetNumberBase();
+            uint result = SetUpConvert(input, numberBase);
             UnfixedDecInteger output = new UnfixedDecInteger(result);
 
             return output;
@@ -43,7 +52,15 @@ namespace binary_calculator.Converters.Integers
         #endregion
 
         #region "Private Methods"
-        private uint ToDecFromBinIntPos(string input,int convertFromBase)
+        private uint SetUpConvert(Undefined input,int numBase)
+        {
+            int convertFromBase = numBase;
+            string toBeConverted = input.StoredInput;
+            uint result = ToDecFromIntPos(toBeConverted, convertFromBase);
+            return result;
+        }
+
+        private uint ToDecFromIntPos(string input,int convertFromBase)
         {
             uint result = 0;
 

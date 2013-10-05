@@ -7,7 +7,7 @@ using System.IO;
 
 namespace binary_calculator
 {//namespace
-    class BinCalc
+    public class BinCalc
     {//class
 
         #region "constants for whole class"

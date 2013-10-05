@@ -74,6 +74,7 @@
     <Compile Include="Wrappers\Integers\DecInt.cs" />
     <Compile Include="Unused\DecInteger.cs" />
     <Compile Include="Unused\SignedBinaryInteger.cs" />
+    <Compile Include="Wrappers\Integers\PowOfTwoInt.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedBinInt.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedDecInt.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedDecInteger.cs" />
@@ -90,7 +91,6 @@
     <Compile Include="Converters\Integers\ConverterToBin.cs" />
     <Compile Include="Converters\GenericConverter.cs" />
     <Compile Include="Unused\NoFixedSizeUnsignedInt.cs" />
-    <Compile Include="Converters\Integers\GenericIntegerConverter.cs" />
     <Compile Include="OutSideValueException.cs" />
     <Compile Include="ProcessCalculatorInput.cs" />
     <Compile Include="Program.cs" />

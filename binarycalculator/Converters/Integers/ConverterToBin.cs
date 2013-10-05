@@ -6,7 +6,7 @@ using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Converters.Integers
 {
-    public class ConverterToBin: GenericIntegerConverter
+    public class ConverterToBin: GenericConverter
     {
         #region "constants for whole class"
 
@@ -48,17 +48,30 @@ namespace binary_calculator.Converters.Integers
 
         //}
 
-        //public UnfixedBinInteger Convert(UnfixedPowOfTwoInteger input)
-        //{
-        //    string toBeConverted = input.storedInput;
-        //    NumberBases numberBase = input.GetNumberBase();
+        public UnfixedBinInteger Convert(UnfixedDecInteger input)
+        {
+            long toBeConverted = input.StoredNumber;
+            throw new NotImplementedException();
+        }
 
-        //    string result = FromPowerOfTwoIntPos(toBeConverted, numberBase);
+        public UnfixedBinInteger Convert(UnfixedPowOfTwoInteger input)
+        {
+            //string toBeConverted = input.StoredInput;
+            //NumberBases numberBase = input.GetNumberBase();
 
-        //    UnfixedBinInteger bin = new UnfixedBinInteger(result);
-        //    return bin;
+            //string result = FromPowerOfTwoIntPos(toBeConverted, numberBase);
 
-        //}
+            //UnfixedBinInteger bin = new UnfixedBinInteger(result);
+            //return bin;
+
+            ConverterToDec converter = new ConverterToDec();
+            UnfixedDecInteger udec = converter.Convert(input);
+
+
+
+            throw new NotImplementedException();
+
+        }
 
         #endregion
 
@@ -78,6 +91,9 @@ namespace binary_calculator.Converters.Integers
             return result;
         }
 
+        
+
+        //this method might only be for floating point numbers. Needs investigation
         private string FromPowerOfTwoIntPos(string input,NumberBases choice)
         {
             string result = "";
@@ -110,7 +126,7 @@ namespace binary_calculator.Converters.Integers
             }
 
             result = string.Concat(binQueue.ToArray());
-            result = outputAdjuster(result);
+            result = outputAdjuster(result); 
 
             return result;
         }
