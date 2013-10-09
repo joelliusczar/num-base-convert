@@ -1,8 +1,9 @@
 ﻿using binary_calculator.EnumsAndConstants;
+using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedAnyInteger: UndefinedWrapper 
+    public class UnfixedAnyInteger: Undefined
     {
         
         #region "constants for whole class"
@@ -12,24 +13,24 @@ namespace binary_calculator.Wrappers.UnfixedSize
         #region "Properties"
         private NumberBases _choice;
 
-        public override string storedInput
+        public override string StoredInput
         {
             get
             {
-                return base.storedInput;
+                return base.StoredInput;
             }
             set
             {
-                if (base.storedInput == null || base.storedInput.Length == 0)
+                if (base.StoredInput == null || base.StoredInput.Length == 0)
                 {
-                    base.storedInput = "0";
+                    base.StoredInput = "0";
                 }
 
-                bool inputAllowed = AreAllCharsOfInputLegal(value, baseChoice);
+                bool inputAllowed = GlobalUtilities.AreAllCharsOfInputLegal(value, baseChoice);
                 if (inputAllowed)
                 {
-                    if (value.Length == 0) base.storedInput = "0";
-                    else base.storedInput = value;
+                    if (value.Length == 0) base.StoredInput = "0";
+                    else base.StoredInput = value;
                 }
             }
         }
@@ -40,7 +41,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
             set
             {
                 _choice = value;
-                storedInput = "0"; //resets the number so that there are no illegal characters according to the new number base.
+                StoredInput = "0"; //resets the number so that there are no illegal characters according to the new number base.
             }
         }
         #endregion
@@ -49,12 +50,15 @@ namespace binary_calculator.Wrappers.UnfixedSize
         public UnfixedAnyInteger(NumberBases type, string input = "")
         {
             this.baseChoice = type;
-            this.storedInput = input;
+            this.StoredInput = input;
         }
         #endregion
 
         #region "Private Methods"
-        
+        protected override void SetStoredInput(string input)
+        {
+            this.StoredInput = input;
+        }
 
         #endregion
 

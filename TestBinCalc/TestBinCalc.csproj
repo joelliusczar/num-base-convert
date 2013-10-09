@@ -52,12 +52,14 @@
     <Compile Include="TestObjects\BinInt_TEST.cs" />
     <Compile Include="TestObjects\BinUtilities_TEST.cs" />
     <Compile Include="TestObjects\bin_calc_TEST.cs" />
+    <Compile Include="TestObjects\ConverterToAny_TEST.cs" />
     <Compile Include="TestObjects\ConverterToBin_TEST.cs" />
     <Compile Include="TestObjects\ConverterToDec_TEST.cs" />
     <Compile Include="TestObjects\DecInt_TEST.cs" />
     <Compile Include="TestObjects\IWrapperTest.cs" />
     <Compile Include="TestObjects\SignedBinInt_TEST.cs" />
     <Compile Include="TestObjects\SignedDecInt_TEST.cs" />
+    <Compile Include="TestObjects\UnfixedAnyInteger_TEST.cs" />
     <Compile Include="TestObjects\UnfixedBinInteger_TEST.cs" />
     <Compile Include="TestObjects\UnfixedDecInteger_TEST.cs" />
     <Compile Include="TestObjects\UnfixedPowOfTwoInteger_TEST.cs" />

@@ -50,8 +50,7 @@ namespace binary_calculator.Converters.Integers
 
         public UnfixedBinInteger Convert(UnfixedDecInteger input)
         {
-            long toBeConverted = input.StoredNumber;
-            throw new NotImplementedException();
+            return UDecToUBin(input);
         }
 
         public UnfixedBinInteger Convert(UnfixedPowOfTwoInteger input)
@@ -66,16 +65,25 @@ namespace binary_calculator.Converters.Integers
 
             ConverterToDec converter = new ConverterToDec();
             UnfixedDecInteger udec = converter.Convert(input);
+            UnfixedBinInteger ubin = UDecToUBin(udec);
 
-
-
-            throw new NotImplementedException();
+            return ubin;
 
         }
+
+        
 
         #endregion
 
         #region "Private Methods"
+        private UnfixedBinInteger UDecToUBin(UnfixedDecInteger udec)
+        {
+            ConverterToAny converterAny = new ConverterToAny();
+            UnfixedAnyInteger any = converterAny.Convert(udec, NumberBases.BASE_TWO);
+            UnfixedBinInteger ubin = new UnfixedBinInteger(any.StoredInput);
+            return ubin;
+        }
+
         private string FromDecIntPos(long input, int bitNumber = 8)
         {
             string result = "";
@@ -91,7 +99,7 @@ namespace binary_calculator.Converters.Integers
             return result;
         }
 
-        
+          
 
         //this method might only be for floating point numbers. Needs investigation
         private string FromPowerOfTwoIntPos(string input,NumberBases choice)

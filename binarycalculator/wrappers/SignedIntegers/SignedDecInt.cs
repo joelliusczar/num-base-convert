@@ -166,7 +166,10 @@ namespace binary_calculator.Wrappers.SignedIntegers
             FrontChar = SignBit ? "-" : "";
         }
 
-        
+        public uint GetUnsignedNumber()
+        {
+            return UnfixedDec.StoredNumber;
+        }
         #endregion
 
         #region "private methods"

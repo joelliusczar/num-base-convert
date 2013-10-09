@@ -26,6 +26,8 @@ namespace binary_calculator.dictionaries
                 "GHIJKLMNOPQRSTUVWXYZghijklmnopqrstuvwxyz-.`!@#$%^&*()<>?:{},/;'[]\\|\"");
             illegalCharLists.Add(NumberBases.BASE_EIGHT,
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-.`!@#$%^&*()<>?:{},/;'[]\\|\"89");
+            illegalCharLists.Add(NumberBases.BASE_THIRTYSIX,
+                "-.`!@#$%^&*()<>?:{},/;'[]\\|\"");
             #endregion
         }
 

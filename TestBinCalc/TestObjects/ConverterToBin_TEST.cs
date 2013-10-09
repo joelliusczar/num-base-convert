@@ -100,6 +100,9 @@ namespace TestBinCalc.TestObjects
             oct.StoredInput = "42";
             ubin = converter.Convert(oct);
             Assert.AreEqual("100010", ubin.StoredInput);
+            oct.StoredInput = "377";
+            ubin = converter.Convert(oct);
+            Assert.AreEqual("11111111", ubin.StoredInput);
 
         }
     }

@@ -21,32 +21,32 @@ namespace binary_calculator.Converters.SignedIntegerConverters
         #endregion
 
         #region "Public Methods"
-        //public SignedBinInt Convert(SignedDecInteger signedDecInteger)
-        //{
-        //    uint inputNumber = signedDecInteger.StoredNumber;
-        //    int size = signedDecInteger.allowedNumberOfBits;
-        //    SignedBinInt signedBin;
+        public SignedBinInt Convert(SignedDecInt signedDecInteger)
+        {
+            uint inputNumber = signedDecInteger.GetUnsignedNumber();
+            int size = signedDecInteger.allowedNumberOfBits;
+            SignedBinInt signedBin;
 
-        //    if (inputNumber >= 0)
-        //    {
-        //        DecInt dec = new DecInt(size, inputNumber);
-        //        ConverterToBin binConvert = new ConverterToBin();
-        //        BinInt bin = binConvert.Convert(dec);
-        //        signedBin = new SignedBinInt(
-        //            bin.StoredInput, bin.allowedNumberOfBits, Constants.POSITIVE);
-        //        return signedBin;
-        //    }
-        //    else
-        //    {
-                
-        //        string negBinRepresentation = this.decToBinNeg(inputNumber, size);
-        //        signedBin = new SignedBinInt(
-        //            negBinRepresentation, size, Constants.NEGATIVE);
-        //    }
+            if (inputNumber >= 0)
+            {
+                DecInt dec = new DecInt(inputNumber,size);
+                ConverterToBin binConvert = new ConverterToBin();
+                BinInt bin = binConvert.Convert(dec);
+                signedBin = new SignedBinInt(
+                    bin.StoredInput, bin.allowedNumberOfBits, Constants.POSITIVE);
+                return signedBin;
+            }
+            else
+            {
 
-        //    return signedBin;
+                string negBinRepresentation = this.decToBinNeg(inputNumber, size);
+                signedBin = new SignedBinInt(
+                    negBinRepresentation, size, Constants.NEGATIVE);
+            }
 
-        //}
+            return signedBin;
+
+        }
 
         public SignedBinInt Negate(SignedBinInt signedBinaryInteger)
         {
@@ -73,7 +73,7 @@ namespace binary_calculator.Converters.SignedIntegerConverters
         #region "Private Methods"
 
         //this method is for negative integers only, not fractions or positive numbers
-        public string decToBinNeg(int input, int size)
+        public string decToBinNeg(long input, int size)
         {//decToBinNeg
             const int MATHEMATICALLY_NECESSARY_CORRECTION = 1;
 
