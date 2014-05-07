@@ -1,5 +1,6 @@
-﻿using binary_calculator.EnumsAndConstants;
+using binary_calculator.EnumsAndConstants;
 using binary_calculator.Utilities;
+using System;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
@@ -21,11 +22,11 @@ namespace binary_calculator.Wrappers.UnfixedSize
             set
             {
 
-                string result = "";
+                Tuple<string,bool> result;
 
-                bool isValid = BinUtilities.VerifyInput(value,base.StoredInput,out result);
+                result = BinUtilities.VerifyInputAsBin(value,base.StoredInput);
 
-                base.StoredInput = result;
+                base.StoredInput = result.Item1;
                 
             }
         }
