@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,7 @@ namespace binary_calculator.Wrappers
             get { return _storedInput; }
             set 
             {
-                if (_storedInput == null || _storedInput.Length == 0)
+                if (string.IsNullOrEmpty(_storedInput))
                 {
                     _storedInput = "0";
                 }
