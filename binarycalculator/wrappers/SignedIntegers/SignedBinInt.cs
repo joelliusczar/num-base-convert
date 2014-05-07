@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -79,18 +79,15 @@ namespace binary_calculator.Wrappers.SignedIntegers
                 value = value.TrimStart('0');
                 if (value.Length <= BitNumberAdjustedForSignBit)
                 {
-                    string result = "";
-                    BinUtilities.VerifyInput(value, _storedInput, out result, '0');
-                    _storedInput = result;
+                    Tuple<string,bool> result;
+                    result = BinUtilities.VerifyInputAsBin(value, _storedInput, '0');
+                    _storedInput = result.Item1;
                 }
 
                
                     TrimmedOff = BinUtilities.GetFiller(
                         _storedInput,
                         BitNumberAdjustedForSignBit, '0');
-
-
-                
 
             }
         }
@@ -99,7 +96,10 @@ namespace binary_calculator.Wrappers.SignedIntegers
         #endregion
 
         #region "contructors"
-        public SignedBinInt(string input = "", int size = 8, bool sign = false)
+
+        //public SignedBinInt(string input)
+
+        public SignedBinInt(bool sign = false, string input = "", int size = 8)
         {
             this.SignBit = sign;
             this.allowedNumberOfBits = size;
