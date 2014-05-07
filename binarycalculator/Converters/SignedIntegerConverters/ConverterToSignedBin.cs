@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,16 +32,14 @@ namespace binary_calculator.Converters.SignedIntegerConverters
                 DecInt dec = new DecInt(inputNumber,size);
                 ConverterToBin binConvert = new ConverterToBin();
                 BinInt bin = binConvert.Convert(dec);
-                signedBin = new SignedBinInt(
-                    bin.StoredInput, bin.allowedNumberOfBits, Constants.POSITIVE);
+                signedBin = new SignedBinInt(Constants.POSITIVE, bin.StoredInput, bin.allowedNumberOfBits);
                 return signedBin;
             }
             else
             {
 
                 string negBinRepresentation = this.decToBinNeg(inputNumber, size);
-                signedBin = new SignedBinInt(
-                    negBinRepresentation, size, Constants.NEGATIVE);
+                signedBin = new SignedBinInt(Constants.NEGATIVE, negBinRepresentation, size);
             }
 
             return signedBin;
@@ -64,7 +62,7 @@ namespace binary_calculator.Converters.SignedIntegerConverters
             string toBeNegated = unsigned.StoredInput;
             string result = this.NegateBin(toBeNegated);
 
-            SignedBinInt output = new SignedBinInt(result, unsigned.allowedNumberOfBits);
+            SignedBinInt output = new SignedBinInt(input: result, size: unsigned.allowedNumberOfBits);
 
             return output;
         }
