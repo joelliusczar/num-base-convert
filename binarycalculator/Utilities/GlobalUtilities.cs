@@ -1,4 +1,4 @@
-﻿using binary_calculator.EnumsAndConstants;
+using binary_calculator.EnumsAndConstants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +8,12 @@ namespace binary_calculator.Utilities
 {
     public class GlobalUtilities
     {
+        /// <summary>
+        /// Tests if all of the characters in the string are allowed for the given base
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="baseChoice"></param>
+        /// <returns></returns>
         public static bool AreAllCharsOfInputLegal(string input, NumberBases baseChoice)
         {
             bool result = true;
