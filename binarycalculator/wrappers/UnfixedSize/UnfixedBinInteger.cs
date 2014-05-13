@@ -11,7 +11,13 @@ namespace binary_calculator.Wrappers.UnfixedSize
         #endregion
 
         #region "Properties"
+        private bool _IsValid;
 
+        public bool IsValid
+        {
+            get { return _IsValid; }
+            private set { _IsValid = value; }
+        }
 
         public override string StoredInput
         {
@@ -25,7 +31,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
                 Tuple<string,bool> result;
 
                 result = BinUtilities.VerifyInputAsBin(value,base.StoredInput);
-
+                this.IsValid = result.Item2;
                 base.StoredInput = result.Item1;
                 
             }
@@ -37,6 +43,10 @@ namespace binary_calculator.Wrappers.UnfixedSize
         public UnfixedBinInteger(string input = "")
         {
             this.StoredInput = input;
+            if (!this.IsValid)
+            {
+                throw new IncorrectNumberBaseException();
+            }
             
         }
 

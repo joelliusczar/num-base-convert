@@ -23,18 +23,16 @@ namespace binary_calculator.Utilities
             if (validUint)
             {
                 outputNumber = temp;
-                return true;
             }
             else if (isUninitialized)
             {
                 outputNumber = 0;
-                return false;
             }
             else
             {
                 outputNumber = prevInputNumber;
-                return false;
             }
+            return validUint;
 
         }
     }

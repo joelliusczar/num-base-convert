@@ -48,23 +48,26 @@ namespace binary_calculator.Converters.SignedIntegerConverters
 
         public SignedBinInt Negate(SignedBinInt signedBinaryInteger)
         {
-            string toBeNegated = signedBinaryInteger.StoredInput;
-            string result = this.NegateBin(toBeNegated);
+            //string toBeNegated = signedBinaryInteger.StoredInput;
+            //string result = this.NegateBin(toBeNegated);
 
-            signedBinaryInteger.ReverseSign();
-            signedBinaryInteger.StoredInput = result;
+            //signedBinaryInteger.ReverseSign();
+            //signedBinaryInteger.StoredInput = result;
 
-            return signedBinaryInteger;
+            //return signedBinaryInteger;
+            throw new NotImplementedException();
         }
 
+        //fix this
         public SignedBinInt Negate(BinInt unsigned)
         {
-            string toBeNegated = unsigned.StoredInput;
-            string result = this.NegateBin(toBeNegated);
+            //string toBeNegated = unsigned.StoredInput;
+            //string result = this.NegateBin(toBeNegated);
 
-            SignedBinInt output = new SignedBinInt(input: result, size: unsigned.allowedNumberOfBits);
+            //SignedBinInt output = new SignedBinInt(input: result, size: unsigned.allowedNumberOfBits);
 
-            return output;
+            //return output;
+            throw new NotImplementedException();
         }
         #endregion
 

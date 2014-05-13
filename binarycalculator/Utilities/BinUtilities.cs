@@ -24,24 +24,23 @@ namespace binary_calculator.Utilities
             bool inputAllowed = GlobalUtilities.AreAllCharsOfInputLegal(input, NumberBases.BASE_TWO);
             if (inputAllowed)
             {
-                if (input.Length == 0) return new Tuple<string, bool>("0", true);
-                else return new Tuple<string, bool>(input, true); 
-
-            }
-            else if (prevInput == null || prevInput.Length == 0)
-            {
-                return new Tuple<string, bool>("0", false); 
-
+                if (!string.IsNullOrEmpty(input))
+                {
+                    return new Tuple<string, bool>(input, inputAllowed); 
+                }
             }
             else
             {
-                return new Tuple<string, bool>(prevInput, false); 
-
+                if (!string.IsNullOrEmpty(prevInput))
+                {
+                    return new Tuple<string, bool>(prevInput, inputAllowed);  
+                }
             }
+            return new Tuple<string, bool>("0", inputAllowed);
 
         }
 
-        public static string TrimOffSignBit(string binInput)
+        public static string RemoveSignBit(string binInput)
         {
             if (!string.IsNullOrWhiteSpace(binInput))
             {
@@ -69,6 +68,14 @@ namespace binary_calculator.Utilities
             return false;
         }
 
+        public static Tuple<string, bool> GetSignBitValueAndCutOffFrontBit(string binInput)
+        {
+            bool signBitValue = GetSignBitValue(binInput);
+            string stringWithoutFrontBit = RemoveSignBit(binInput);
+
+            return new Tuple<string,bool>(stringWithoutFrontBit,signBitValue);
+        }
+
         public static string FillOutWithSelectedChar(string input, int maxLength,char fillerChar)
         {
             string result = "";
@@ -91,7 +98,6 @@ namespace binary_calculator.Utilities
         }
 
         
-
         public static string GetTrimmedOffCharsFromStart(string toBeTrimmed,char charToTrimOff)
         {
             if (!string.IsNullOrEmpty(toBeTrimmed))

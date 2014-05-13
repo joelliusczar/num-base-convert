@@ -58,10 +58,10 @@ namespace TestBinCalc.TestObjects
         public void DeleteChar_TEST()
         {
             UnfixedAnyInteger any = new UnfixedAnyInteger(NumberBases.BASE_THIRTYSIX);
-            any.DeleteChar();
+            any.DeleteCharFromBack();
             Assert.AreEqual("0", any.StoredInput);
             any.StoredInput = "XYZ";
-            any.DeleteChar();
+            any.DeleteCharFromBack();
             Assert.AreEqual("XY", any.StoredInput);
         }
 

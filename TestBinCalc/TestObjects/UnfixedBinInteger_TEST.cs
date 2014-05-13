@@ -81,10 +81,10 @@ namespace TestBinCalc.TestObjects
         public void DeleteChar_TEST()
         {
             UnfixedBinInteger bin = new UnfixedBinInteger("");
-            bin.DeleteChar();
+            bin.DeleteCharFromBack();
             Assert.AreEqual("0", bin.StoredInput);
             bin.StoredInput = "101";
-            bin.DeleteChar();
+            bin.DeleteCharFromBack();
             Assert.AreEqual("10", bin.StoredInput);
 
         }

@@ -152,7 +152,7 @@ namespace binary_calculator.Wrappers.SignedIntegers
 
         public void DeleteChar()
         {
-            UnfixedDec.DeleteChar();
+            UnfixedDec.DeleteCharFromBack();
         }
 
         public void ClearInput()

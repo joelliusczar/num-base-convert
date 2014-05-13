@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binary calculator", "binarycalculator\binary calculator.csproj", "{97D17B5A-394F-4CC8-BE15-BEA5A68AFACD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBinCalc", "TestBinCalc\TestBinCalc.csproj", "{4D889C5D-DD1D-46EB-A33F-7E313D36F679}"

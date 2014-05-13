@@ -18,7 +18,10 @@ namespace binary_calculator.Wrappers.Integers
         {
             get 
             {
-                if (_unfixedBin == null) _unfixedBin = new UnfixedBinInteger("");
+                if (_unfixedBin == null)
+                {
+                    _unfixedBin = new UnfixedBinInteger("");
+                }
                 return _unfixedBin; 
             }
             set { _unfixedBin = value; }
@@ -43,8 +46,15 @@ namespace binary_calculator.Wrappers.Integers
             }
             set
             {
-                if (value.Length <= allowedNumberOfBits) UnfixedBin.StoredInput = value;
-                if (value.Length == 0) UnfixedBin.StoredInput = "0";
+                if (string.IsNullOrEmpty(value))
+                {
+                    UnfixedBin.StoredInput = "0";
+                }
+                if (value.Length <= allowedNumberOfBits)
+                {
+                    UnfixedBin.StoredInput = value;
+                }
+                
             }
         }
         #endregion
@@ -62,12 +72,13 @@ namespace binary_calculator.Wrappers.Integers
 
         public void AddChar(char digit)
         {
-            this.StoredInput = string.Concat(UnfixedBin.StoredInput, digit.ToString());
+            //this.StoredInput = UnfixedBin.StoredInput + digit; I may need to revert back to this if my change breaks stuff
+            this.UnfixedBin.AddChar(digit);
         }
 
         public void DeleteChar()
         {
-            UnfixedBin.DeleteChar();
+            UnfixedBin.DeleteCharFromBack();
         }
 
         public void ClearInput()

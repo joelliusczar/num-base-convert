@@ -21,7 +21,7 @@ namespace binary_calculator.Wrappers.UnfixedSize
             }
             set
             {
-                if (base.StoredInput == null || base.StoredInput.Length == 0)
+                if (string.IsNullOrEmpty(base.StoredInput))
                 {
                     base.StoredInput = "0";
                 }

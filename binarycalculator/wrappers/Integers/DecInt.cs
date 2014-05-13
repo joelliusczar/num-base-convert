@@ -109,7 +109,7 @@ namespace binary_calculator.Wrappers.Integers
 
         public void DeleteChar()
         {
-            UnfixedDec.DeleteChar();
+            UnfixedDec.DeleteCharFromBack();
         }
 
         public void ClearInput()

@@ -18,13 +18,18 @@ namespace binary_calculator.Utilities
         {
             bool result = true;
 
-            binary_calculator.dictionaries.Filters filter = new binary_calculator.dictionaries.Filters();
+            if (!string.IsNullOrEmpty(input))
+            {
 
-            string illegalChars = filter.GetIllegalChars(baseChoice);
+                binary_calculator.dictionaries.Filters filter = new binary_calculator.dictionaries.Filters();
 
-            result = CheckIfContains(input, illegalChars);
+                string illegalChars = filter.GetIllegalChars(baseChoice);
+
+                result = CheckIfContains(input, illegalChars);
+            }
 
             return result;
+
         }
 
         private static bool CheckIfContains(string input, string illegalChars)

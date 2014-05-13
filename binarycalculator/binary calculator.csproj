@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -20,7 +20,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -68,6 +68,7 @@
     <Compile Include="Unused\TestObjects\UnfixedBinInteger_TEST.cs" />
     <Compile Include="Unused\TestObjects\UnfixedPowOfTwoInterger_TEST.cs" />
     <Compile Include="Utilities\BinUtilities.cs" />
+    <Compile Include="Utilities\BitSizeException.cs" />
     <Compile Include="Utilities\DecUtilities.cs" />
     <Compile Include="Utilities\GlobalUtilities.cs" />
     <Compile Include="Utilities\IncorrectBaseException.cs" />
@@ -76,9 +77,10 @@
     <Compile Include="Unused\DecInteger.cs" />
     <Compile Include="Unused\SignedBinaryInteger.cs" />
     <Compile Include="Wrappers\Integers\PowOfTwoInt.cs" />
+    <Compile Include="Unused\SignedBinInt.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedBinInt.cs" />
     <Compile Include="Wrappers\SignedIntegers\SignedDecInt.cs" />
-    <Compile Include="Wrappers\SignedIntegers\SignedDecInteger.cs" />
+    <Compile Include="Unused\SignedDecInteger.cs" />
     <Compile Include="Wrappers\Undefined.cs" />
     <Compile Include="Unused\UndefinedWrapper.cs" />
     <Compile Include="Unused\BinInteger.cs" />

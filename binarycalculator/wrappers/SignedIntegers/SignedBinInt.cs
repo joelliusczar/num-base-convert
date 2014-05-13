@@ -1,21 +1,31 @@
+﻿using binary_calculator.EnumsAndConstants;
+using binary_calculator.Utilities;
+using binary_calculator.Wrappers.UnfixedSize;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using binary_calculator.Wrappers.UnfixedSize;
-using binary_calculator.EnumsAndConstants;
-using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.SignedIntegers
 {
-    public class SignedBinInt: Undefined
+    public class SignedBinInt
     {
-        #region "properties"
+        #region "constants for whole class"
+
+        #endregion
+
+        #region "Properties"
         private int _allowedNumberOfBits;
         private bool _signBit;
-        private string _storedInput;
-
+        private UnfixedBinInteger _unfixedBin;
         private char _insignificantDigit;
+        private bool _isValid;
+
+        public bool IsValid
+        {
+            get { return _isValid && this.UnfixedBin.IsValid; }
+            private set { _isValid = value; }
+        }
 
         private char InsignificantDigit
         {
@@ -23,22 +33,13 @@ namespace binary_calculator.Wrappers.SignedIntegers
             set { _insignificantDigit = value; }
         }
 
-        private string _trimmedOff;
-
-        private string TrimmedOff
-        {
-            get { return _trimmedOff; }
-            set { _trimmedOff = value; }
-        }
-        
-
         private bool SignBit
         {
             get 
             {
                 return _signBit;
             }
-            set 
+            set
             {
                 _signBit = value;
                 if (value) this.InsignificantDigit = '1';
@@ -64,72 +65,90 @@ namespace binary_calculator.Wrappers.SignedIntegers
             }
         }
 
-        public override string StoredInput
+        private UnfixedBinInteger UnfixedBin
         {
             get
             {
-                string toBeReturned = string.Concat(TrimmedOff, _storedInput);
-                if (this.SignBit) return string.Concat("1", toBeReturned);
-                else return string.Concat("0", toBeReturned);
+                if (_unfixedBin == null) _unfixedBin = new UnfixedBinInteger();
+                return _unfixedBin;
+            }
+            set {
+                _unfixedBin = value; 
+            
+            }
+        }
+
+        public string StoredInput
+        {
+            set
+            {
+                UnfixedBinInteger bin = new UnfixedBinInteger(value);
+                this.allowedNumberOfBits = value.Length;
+                this.SignBit = BinUtilities.GetSignBitValue(value);
+                this.UnfixedBin.DeleteCharFromFront();
+            }
+        }
+
+        private string SignificantBits
+        {
+            get
+            {
+                return UnfixedBin.StoredInput;
             }
             set
             {
-                
-
-                value = value.TrimStart('0');
-                if (value.Length <= BitNumberAdjustedForSignBit)
+                if (string.IsNullOrEmpty(value))
                 {
-                    Tuple<string,bool> result;
-                    result = BinUtilities.VerifyInputAsBin(value, _storedInput, '0');
-                    _storedInput = result.Item1;
+                    //investigate this part
+                    this.UnfixedBin.StoredInput = "0";
+                    this.IsValid = true;
+                    return;
                 }
+                if (value.Length <= this.allowedNumberOfBits)
+                {
+                    UnfixedBin.StoredInput = value;
+                }
+                else
+                {
+                    this.IsValid = false; 
+                }
+            }
+        } 
 
-               
-                    TrimmedOff = BinUtilities.GetFiller(
-                        _storedInput,
-                        BitNumberAdjustedForSignBit, '0');
+        #endregion
 
+        #region "constructors"
+
+        public SignedBinInt(bool sign, string input, int size = 8)
+        {
+
+        }
+
+        public SignedBinInt(string input)
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
+                UnfixedBinInteger bin = new UnfixedBinInteger(input);
+                this.allowedNumberOfBits = input.Length;
+                this.SignBit = BinUtilities.GetSignBitValue(input);
+                this.UnfixedBin.DeleteCharFromFront();
+            }
+            else
+            {
+                this.SignBit = false;
+                this.allowedNumberOfBits = 8;
+                this.SignificantBits = "";
             }
         }
 
-
         #endregion
 
-        #region "contructors"
-
-        //public SignedBinInt(string input)
-
-        public SignedBinInt(bool sign = false, string input = "", int size = 8)
-        {
-            this.SignBit = sign;
-            this.allowedNumberOfBits = size;
-            this.StoredInput = input;
-            
-        }
-          
-
+        #region "Public Methods"
         #endregion
 
-        #region "public methods"
-
-
-        public bool GetSign()
-        {
-            return SignBit;
-        }
-
-        public void ReverseSign()
-        {
-            SignBit = !SignBit;
-        }
-        #endregion
-
-        #region "private methods"
-        protected override void SetStoredInput(string input)
-        {
-            this.StoredInput = input;
-        }
+        #region "Private Methods"
         
+
         #endregion
 
     }

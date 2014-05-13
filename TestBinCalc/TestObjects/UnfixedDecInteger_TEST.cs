@@ -91,15 +91,15 @@ namespace TestBinCalc.TestObjects
         public void DeleteChar_TEST()
         {
             UnfixedDecInteger dec = new UnfixedDecInteger("");
-            dec.DeleteChar();
+            dec.DeleteCharFromBack();
             Assert.AreEqual("0", dec.StoredInput);
             Assert.AreEqual(0, dec.StoredNumber);
             dec.StoredInput = "5";
-            dec.DeleteChar();
+            dec.DeleteCharFromBack();
             Assert.AreEqual("0", dec.StoredInput);
             Assert.AreEqual(0, dec.StoredNumber);
             dec.StoredNumber = 256;
-            dec.DeleteChar();
+            dec.DeleteCharFromBack();
             Assert.AreEqual("25", dec.StoredInput);
             Assert.AreEqual(25, dec.StoredNumber);
         }
@@ -114,7 +114,7 @@ namespace TestBinCalc.TestObjects
             dec.AddChar('5');
             Assert.AreEqual("25", dec.StoredInput);
             Assert.AreEqual(25, dec.StoredNumber);
-            dec.DeleteChar();
+            dec.DeleteCharFromBack();
             dec.AddChar('5');
             Assert.AreEqual("25", dec.StoredInput);
             Assert.AreEqual(25, dec.StoredNumber);

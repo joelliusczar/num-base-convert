@@ -31,14 +31,27 @@ namespace binary_calculator.Wrappers
         #region "public methods"
         public virtual void AddChar(char digit)
         {
-            string storeConcat = string.Concat(StoredInput, digit.ToString());
+            string storeConcat = StoredInput + digit;
             this.SetStoredInput(storeConcat);
         }
 
-        public virtual void DeleteChar()
+        public virtual void DeleteCharFromBack()
         {
             string temp = "";
-            if (StoredInput.Length > 0) temp = StoredInput.Substring(0, StoredInput.Length - 1);
+            if (!string.IsNullOrEmpty(this.StoredInput))
+            {
+                temp = StoredInput.Substring(0, StoredInput.Length - 1);
+            }
+            this.SetStoredInput(temp);
+        }
+
+        public virtual void DeleteCharFromFront()
+        {
+            string temp = "";
+            if (!string.IsNullOrEmpty(this.StoredInput))
+            {
+                temp = StoredInput.Substring(1);
+            }
             this.SetStoredInput(temp);
         }
 

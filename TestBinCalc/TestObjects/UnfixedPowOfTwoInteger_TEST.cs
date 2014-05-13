@@ -121,12 +121,12 @@ namespace TestBinCalc.TestObjects
         {
             UnfixedPowOfTwoInteger hex;
             hex = new UnfixedPowOfTwoInteger(PowOfTwoBases.BASE_SIXTEEN);
-            hex.DeleteChar();
+            hex.DeleteCharFromBack();
             Assert.AreEqual("0", hex.StoredInput);
             hex.StoredInput = "123";
-            hex.DeleteChar();
+            hex.DeleteCharFromBack();
             Assert.AreEqual("12", hex.StoredInput);
-            hex.DeleteChar();
+            hex.DeleteCharFromBack();
             Assert.AreEqual("1", hex.StoredInput);
         }
 
