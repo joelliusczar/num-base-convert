@@ -11,7 +11,7 @@ namespace binary_calculator.EnumsAndConstants
         public const char ONE = '1';
         public const int NECESSARY_EXPONENT_ADJUSTMENT = 1;
         public const int NECESSARY_RANGE_ADJUSTMENT = 1;
-        public const int SIZE_ADJUSTER_FOR_SIGN_BIT = 1;
+        public const int SIGN_BIT_LENGTH = 1;
         public const int BEGINING_OF_STRING = 0;
         public const bool POSITIVE = false;
         public const bool NEGATIVE = true;

@@ -16,6 +16,13 @@ namespace binary_calculator.Wrappers.SignedIntegers
         private int _minSize;
         private bool _signBit;
         private string _frontChar;
+        private bool _isValid;
+
+        public bool IsValid
+        {
+            get { return _isValid && this.UnfixedDec.IsValid; }
+            private set { _isValid = value; }
+        }
 
         private string FrontChar
         {
@@ -93,10 +100,13 @@ namespace binary_calculator.Wrappers.SignedIntegers
             }
             set
             {
-                uint temp;
+                
                 bool hasSignChanged = false;
 
-                bool isValid = DecUtilities.VerifyInput(value, UnfixedDec.StoredNumber, out temp, UnfixedDec.StoredInput == null);
+                
+                    
+                Tuple<uint,bool> temp = DecUtilities.VerifyInput(value, UnfixedDec);
+                bool isValid = temp.Item2;
                 if (isValid)
                 {
                     if ((value.IndexOf('-') == Constants.BEGINING_OF_STRING ) != SignBit)
@@ -105,7 +115,8 @@ namespace binary_calculator.Wrappers.SignedIntegers
                         hasSignChanged = true;
                     }
                 }
-                bool isStored = UpdateNumber(temp, SignBit);
+                bool isStored = UpdateNumber(temp.Item1, SignBit);
+                this.IsValid = isStored;
 
                 if (!isStored&&isValid&&hasSignChanged) ReverseSign();
                 
@@ -121,24 +132,55 @@ namespace binary_calculator.Wrappers.SignedIntegers
             }
             set
             {
-                UpdateNumber(value, SignBit);
+                
+                this.IsValid = UpdateNumber(value, SignBit);
             }
         }
         #endregion
 
         #region "contructors"
-        public SignedDecInt(uint input = 0,int allowedNumberOfBits = 8, bool sign = false)
+        public SignedDecInt(int input, int allowedNumberOfBits = 8)
+        {
+            this.allowedNumberOfBits = allowedNumberOfBits;
+            if (input < 0)
+            {
+                this.SignBit = Constants.NEGATIVE;
+                this.StoredNumber = (uint)(input * -1);
+            }
+            else
+            {
+                this.SignBit = Constants.POSITIVE;
+                this.StoredNumber = (uint)input;
+            }
+
+            if (!this.IsValid)
+            {
+                throw new IllegalInputException();
+            }
+        }
+
+        public SignedDecInt(uint input,int allowedNumberOfBits = 8, bool sign = false)
         {
             this.SignBit = sign;
             this.allowedNumberOfBits = allowedNumberOfBits;
             this.StoredNumber = input;
+
+            if (!this.IsValid)
+            {
+                throw new IllegalInputException();
+            }
             
         }
 
-        public SignedDecInt(string input = "", int allowedNumberOfBits = 8)
+        public SignedDecInt(string input, int allowedNumberOfBits = 8)
         {
             this.allowedNumberOfBits = allowedNumberOfBits;
             this.StoredInput = input;
+
+            if (!this.IsValid)
+            {
+                throw new IllegalInputException();
+            }
             
         }
         #endregion
@@ -176,9 +218,7 @@ namespace binary_calculator.Wrappers.SignedIntegers
         private bool TestAgainstSize(long value,bool isNegative)
         {
             int size;
-            if (isNegative) size = MinSize;
-            else size = MaxSize;
-
+            size = isNegative ? MinSize : MaxSize;
             return (value <= size) && (value >= 0);
         }
 

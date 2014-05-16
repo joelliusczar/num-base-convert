@@ -47,6 +47,28 @@ namespace binary_calculator.Wrappers.SignedIntegers
             }
         }
 
+        private char SignDigit
+        {
+            get
+            {
+                if (SignBit)
+                {
+                    return '1';
+                }
+                else
+                {
+                    return '0';
+                }
+            }
+        }
+
+        public int Length
+        {
+            get
+            {
+                return this.UnfixedBin.Length;
+            }
+        }
 
         public int allowedNumberOfBits
         {
@@ -61,7 +83,7 @@ namespace binary_calculator.Wrappers.SignedIntegers
         {
             get
             {
-                return allowedNumberOfBits - Constants.SIZE_ADJUSTER_FOR_SIGN_BIT;
+                return allowedNumberOfBits - Constants.SIGN_BIT_LENGTH;
             }
         }
 
@@ -80,11 +102,22 @@ namespace binary_calculator.Wrappers.SignedIntegers
 
         public string StoredInput
         {
+            get 
+            {
+                int insignificantDigitFillerSize;
+                string fillerDigits = "";
+                if ((insignificantDigitFillerSize = (UnfixedBin.Length + Constants.SIGN_BIT_LENGTH - this.allowedNumberOfBits)) > 0)
+                {
+                    fillerDigits = new String(this.InsignificantDigit, insignificantDigitFillerSize);
+                }
+                return SignDigit + fillerDigits + SignificantBits;
+            }
             set
             {
                 UnfixedBinInteger bin = new UnfixedBinInteger(value);
                 this.allowedNumberOfBits = value.Length;
                 this.SignBit = BinUtilities.GetSignBitValue(value);
+                this.UnfixedBin = bin;
                 this.UnfixedBin.DeleteCharFromFront();
             }
         }
@@ -97,16 +130,10 @@ namespace binary_calculator.Wrappers.SignedIntegers
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
+
+                if (value.Length <= this.BitNumberAdjustedForSignBit)
                 {
-                    //investigate this part
-                    this.UnfixedBin.StoredInput = "0";
-                    this.IsValid = true;
-                    return;
-                }
-                if (value.Length <= this.allowedNumberOfBits)
-                {
-                    UnfixedBin.StoredInput = value;
+                    this.UnfixedBin.StoredInput = value;
                 }
                 else
                 {
@@ -121,6 +148,16 @@ namespace binary_calculator.Wrappers.SignedIntegers
 
         public SignedBinInt(bool sign, string input, int size = 8)
         {
+            if(!string.IsNullOrEmpty(input))
+            {
+                this.SignBit = sign;
+                this.allowedNumberOfBits = size;
+                this.SignificantBits = input;
+            }
+            else
+            {
+
+            }
 
         }
 
@@ -128,16 +165,13 @@ namespace binary_calculator.Wrappers.SignedIntegers
         {
             if (!string.IsNullOrEmpty(input))
             {
-                UnfixedBinInteger bin = new UnfixedBinInteger(input);
-                this.allowedNumberOfBits = input.Length;
-                this.SignBit = BinUtilities.GetSignBitValue(input);
-                this.UnfixedBin.DeleteCharFromFront();
+                this.StoredInput = input;
             }
             else
             {
                 this.SignBit = false;
                 this.allowedNumberOfBits = 8;
-                this.SignificantBits = "";
+                this.SignificantBits = "0";
             }
         }
 

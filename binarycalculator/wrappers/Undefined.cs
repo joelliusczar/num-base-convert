@@ -5,11 +5,26 @@ using System.Text;
 
 namespace binary_calculator.Wrappers
 {
-    public abstract class Undefined
+    public abstract class UndefinedNumber
     {
         
         #region "properties"
         private string _storedInput;
+        private bool _isValid;
+
+        public bool IsValid
+        {
+            get { return _isValid; }
+            protected set { _isValid = value; }
+        }
+
+        public int Length
+        {
+            get
+            {
+                return this.StoredInput.Length;
+            }
+        }
 
         public virtual string StoredInput
         {

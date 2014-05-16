@@ -3,7 +3,7 @@ using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedAnyInteger: Undefined
+    public class UnfixedAnyInteger: UndefinedNumber
     {
         
         #region "constants for whole class"

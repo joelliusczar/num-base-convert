@@ -71,6 +71,7 @@
     <Compile Include="Utilities\BitSizeException.cs" />
     <Compile Include="Utilities\DecUtilities.cs" />
     <Compile Include="Utilities\GlobalUtilities.cs" />
+    <Compile Include="Utilities\IllegalInputException.cs" />
     <Compile Include="Utilities\IncorrectBaseException.cs" />
     <Compile Include="Wrappers\Integers\BinInt.cs" />
     <Compile Include="Wrappers\Integers\DecInt.cs" />

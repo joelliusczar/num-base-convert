@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using binary_calculator.EnumsAndConstants;
+using binary_calculator.Wrappers.UnfixedSize;
 
 namespace binary_calculator.Utilities
 {
     public static class DecUtilities
     {
 
-        public static bool VerifyInput(string input, uint prevInputNumber, out uint outputNumber, bool isUninitialized)
+        public static Tuple<uint, bool> VerifyInput(string input, UnfixedDecInteger dec)
+        {
+            return VerifyInput(input, dec.StoredNumber, dec.StoredInput == null);
+        }
+
+        public static Tuple<uint,bool> VerifyInput(string input, uint prevInputNumber, bool isUninitialized)
         {
             uint temp;
 
             input = input.TrimStart('0');
-            if (input.Length == 0)
+            if (string.IsNullOrEmpty(input))
             {
                 input = "0";
             }
@@ -22,17 +28,14 @@ namespace binary_calculator.Utilities
             bool validUint = (uint.TryParse(input, out temp));
             if (validUint)
             {
-                outputNumber = temp;
+                return new Tuple<uint, bool>(temp, validUint);
             }
             else if (isUninitialized)
             {
-                outputNumber = 0;
+                return new Tuple<uint, bool>(0, validUint);
             }
-            else
-            {
-                outputNumber = prevInputNumber;
-            }
-            return validUint;
+            return new Tuple<uint, bool>(prevInputNumber, validUint);
+
 
         }
     }

@@ -3,7 +3,7 @@ using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedPowOfTwoInteger : Undefined
+    public class UnfixedPowOfTwoInteger : UndefinedNumber
     {
         private PowOfTwoBases _baseChoice;
 

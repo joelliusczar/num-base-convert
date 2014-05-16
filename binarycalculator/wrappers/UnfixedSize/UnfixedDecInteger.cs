@@ -6,7 +6,7 @@ using binary_calculator.Utilities;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedDecInteger: Undefined
+    public class UnfixedDecInteger: UndefinedNumber
     {
 
         #region "constants for whole class"
@@ -50,12 +50,11 @@ namespace binary_calculator.Wrappers.UnfixedSize
             }
             set
             {
-                uint temp;
 
-                DecUtilities.VerifyInput(value, this.StoredNumber, out temp, base.StoredInput == null);
+                Tuple<uint, bool> temp = DecUtilities.VerifyInput(value, this.StoredNumber, base.StoredInput == null);
 
                 base.StoredInput = temp.ToString();
-                this.SafeStoredNumber = temp;
+                this.SafeStoredNumber = temp.Item1;
 
                
 

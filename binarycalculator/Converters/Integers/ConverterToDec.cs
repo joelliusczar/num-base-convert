@@ -52,7 +52,7 @@ namespace binary_calculator.Converters.Integers
         #endregion
 
         #region "Private Methods"
-        private uint SetUpConvert(Undefined input,int numBase)
+        private uint SetUpConvert(UndefinedNumber input,int numBase)
         {
             int convertFromBase = numBase;
             string toBeConverted = input.StoredInput;

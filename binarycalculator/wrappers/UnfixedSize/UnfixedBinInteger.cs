@@ -4,20 +4,13 @@ using System;
 
 namespace binary_calculator.Wrappers.UnfixedSize
 {
-    public class UnfixedBinInteger: Undefined
+    public class UnfixedBinInteger: UndefinedNumber
     {
         #region "constants for whole class"
 
         #endregion
 
         #region "Properties"
-        private bool _IsValid;
-
-        public bool IsValid
-        {
-            get { return _IsValid; }
-            private set { _IsValid = value; }
-        }
 
         public override string StoredInput
         {

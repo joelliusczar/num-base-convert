@@ -62,10 +62,10 @@ namespace binary_calculator.Wrappers.Integers
             }
             set
             {
-                uint temp;
+                
 
-                DecUtilities.VerifyInput(value, UnfixedDec.StoredNumber, out temp, UnfixedDec.StoredInput == null);
-                this.StoredNumber = temp;
+                Tuple<uint,bool> temp = DecUtilities.VerifyInput(value, UnfixedDec.StoredNumber, UnfixedDec.StoredInput == null);
+                this.StoredNumber = temp.Item1;
 
             }
         }
